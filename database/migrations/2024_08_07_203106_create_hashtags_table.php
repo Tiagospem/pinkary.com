@@ -17,16 +17,16 @@ return new class extends Migration
     {
         Schema::create('hashtags', function (Blueprint $table): void {
             $table->id();
-            $table->string('name')->unique();
+            $table->string('name')->unique()->collation('utf8mb4_unicode_ci');
             $table->timestamps();
-
-            $table->rawIndex('name collate nocase', 'name_collate_nocase');
         });
 
         Schema::create('hashtag_question', function (Blueprint $table): void {
             $table->id();
-            $table->foreignIdFor(Hashtag::class)->constrained()->cascadeOnDelete();
-            $table->foreignIdFor(Question::class)->constrained()->cascadeOnDelete();
+            $table->foreignId('hashtag_id')->constrained()->cascadeOnDelete();
+
+            $table->uuid('question_id');
+            $table->foreign('question_id')->references('id')->on('questions')->cascadeOnDelete();
 
             $table->unique(['hashtag_id', 'question_id']);
         });
