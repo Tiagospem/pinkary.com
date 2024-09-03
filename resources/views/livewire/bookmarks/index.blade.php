@@ -7,13 +7,13 @@
         />
     @empty
         <div class="rounded-lg">
-            <p class="text-slate-400">No bookmarks.</p>
+            <p class="text-slate-400">Nenhum marcador.</p>
         </div>
     @endforelse
 
     <x-load-more-button
         :perPage="$perPage"
         :paginator="$bookmarks"
-        message="There are no more bookmarks to load, or you have scrolled too far."
+        message="Não há mais marcadores para carregar ou você rolou para longe demais."
     />
 </div>

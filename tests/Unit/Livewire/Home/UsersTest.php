@@ -11,7 +11,7 @@ use Livewire\Livewire;
 test('lists no users when there are no users', function () {
     $component = Livewire::test(Users::class);
 
-    $component->assertSee('No users found.');
+    $component->assertSee('Nenhum usuário encontrado.');
 });
 
 test('lists by default users with GitHub or Twitter links', function () {

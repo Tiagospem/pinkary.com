@@ -8,7 +8,7 @@
             <x-dropdown-link-profile>
                 <x-slot name="trigger">
                     <button
-                        x-bind:class="{ 'bg-pink-500 hover:bg-pink-500': open,
+                        x-bind:class="{ 'bg-orange-500 hover:bg-orange-500': open,
                                         'bg-slate-900 hover:bg-slate-800': !open }"
                                     class="mr-2 flex size-10 items-center justify-center rounded-lg text-slate-300 hover:text-white transition duration-150 ease-in-out "
                     >
@@ -154,7 +154,7 @@
                 href="{{ route('profile.edit') }}"
                 class="text-sm text-slate-500 hover:underline"
                 wire:navigate
-                >Tell people about yourself</a
+                >Conte às pessoas sobre você</a
             >
         @endif
 
@@ -215,7 +215,7 @@
     <div class="py-5">
         @if ($links->isEmpty())
             @if (auth()->user()?->is($user))
-                <p class="mx-2 text-center text-slate-500">No links yet. Add your first link!</p>
+                <p class="mx-2 text-center text-slate-500">Sem links ainda. Adicione seu primeiro link!</p>
             @endif
         @else
             @if (auth()->user()?->is($user))
@@ -301,7 +301,7 @@
 
                                 <form wire:submit="destroy({{ $link->id }})">
                                     <button
-                                        onclick="if (!confirm('Are you sure you want to delete this link?')) { return false; }"
+                                        onclick="if (!confirm('Deseja realmente apagar este link?')) { return false; }"
                                         type="submit"
                                         class="flex w-10 justify-center text-slate-300 opacity-50 hover:opacity-100 focus:outline-none"
                                     >
@@ -357,7 +357,7 @@
                         :class="showSettingsForm ? gradient + ' ' + link_shape : '{{ $user->gradient }} {{ $user->link_shape }}'"
                     >
                         <x-icons.plus class="mr-1.5 size-5" />
-                        Add New Link
+                        Adicionar um link
                     </button>
                     <button
                         x-on:click="showSettingsForm = ! showSettingsForm ; showLinksForm = false"

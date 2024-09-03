@@ -37,7 +37,7 @@
                              title="Reinsert the image"
                              class="h-full w-full rounded-lg object-cover cursor-pointer"/>
                         <button @click="removeImage($event, index)"
-                                class="absolute top-0.5 right-0.5 p-1 rounded-md bg-slate-800 bg-opacity-75 text-slate-400 hover:text-pink-500">
+                                class="absolute top-0.5 right-0.5 p-1 rounded-md bg-slate-800 bg-opacity-75 text-slate-400 hover:text-orange-500">
                             <x-icons.close class="size-4"/>
                         </button>
                     </div>
@@ -59,14 +59,14 @@
                     class="text-{{ $user->left_color }} border-{{ $user->left_color }}"
                     type="submit"
                 >
-                    {{ __('Send') }}
+                    {{ __('Enviar') }}
                 </x-primary-button>
                 <button
-                    title="Upload an image"
+                    title="Enviar Imagem"
                     x-ref="imageButton"
                     :disabled="uploading || images.length >= uploadLimit"
-                    class="rounded-lg bg-slate-800 text-sm text-slate-400 p-1.5 hover:text-pink-500"
-                    :class="{'cursor-not-allowed text-pink-500': uploading || images.length >= uploadLimit}"
+                    class="rounded-lg bg-slate-800 text-sm text-slate-400 p-1.5 hover:text-orange-500"
+                    :class="{'cursor-not-allowed text-orange-500': uploading || images.length >= uploadLimit}"
                 >
                     <x-heroicon-o-camera class="h-5 w-5"/>
                 </button>
@@ -81,7 +81,7 @@
                     <label
                         for="anonymously"
                         class="ml-2 text-slate-400"
-                        >Anonymously</label
+                        >Anônimo</label
                     >
                 </div>
             @endif

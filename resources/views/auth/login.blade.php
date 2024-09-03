@@ -58,7 +58,7 @@
                     name="remember"
                 />
                 <span class="ml-2 text-sm text-slate-500">
-                    {{ __('Remember me') }}
+                    {{ __('Lembrar') }}
                 </span>
             </label>
         </div>
@@ -70,7 +70,7 @@
                     href="{{ route('password.request') }}"
                     wire:navigate
                 >
-                    {{ __('Forgot your password?') }}
+                    {{ __('Esqueceu a sua senha?') }}
                 </a>
             @endif
 
@@ -83,13 +83,13 @@
     <x-section-border />
 
     <div class="mt-4 text-center text-sm text-slate-500">
-        Don't have an account?
+       Não tem uma conta?
         <a
             href="{{ route('register') }}"
             class="text-slate-200 underline hover:no-underline"
             wire:navigate
         >
-            {{ __('Sign up here') }}
+            {{ __('Registre-se aqui') }}
         </a>
     </div>
 </x-guest-layout>

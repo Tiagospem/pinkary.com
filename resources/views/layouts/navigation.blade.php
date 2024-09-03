@@ -26,20 +26,6 @@
                     </a>
 
                     <a
-                        title="Source code"
-                        target="_blank"
-                        href="https://github.com/pinkary-project/pinkary.com"
-                        class=""
-                    >
-                        <button
-                            type="button"
-                            class="text-slate-500 hover:text-slate-100 inline-flex items-center rounded-md border border-transparent bg-slate-900 px-3 py-2 text-sm font-medium leading-4 transition duration-150 ease-in-out focus:outline-none"
-                        >
-                            <x-heroicon-o-code-bracket class="h-6 w-6"/>
-                        </button>
-                    </a>
-
-                    <a
                         title="Profile"
                         href="{{ route('profile.show', ['username' => auth()->user()->username]) }}"
                         class=""
@@ -68,7 +54,7 @@
                     </a>
 
                     <a
-                        title="Notifications"
+                        title="Notificaões"
                         href="{{ route('notifications.index') }}"
                         class=""
                         wire:navigate
@@ -99,11 +85,11 @@
 
                     <x-slot name="content">
                         <x-dropdown-link :href="route('about')">
-                            {{ __('About') }}
+                            {{ __('Sobre') }}
                         </x-dropdown-link>
                         @auth
                             <x-dropdown-link :href="route('profile.edit')">
-                                {{ __('Settings') }}
+                                {{ __('Configurações') }}
                             </x-dropdown-link>
 
                             <form
@@ -114,7 +100,7 @@
                                 @csrf
 
                                 <x-dropdown-button onclick="event.preventDefault();this.closest('form').submit();">
-                                    {{ __('Log Out') }}
+                                    {{ __('Sair') }}
                                 </x-dropdown-button>
                             </form>
                         @else
@@ -136,7 +122,7 @@
                                 :href="route('register')"
                                 :class="request()->routeIs('register') ? 'bg-slate-800' : ''"
                             >
-                                {{ __('Register') }}
+                                {{ __('Registrar') }}
                             </x-dropdown-link>
                         @endauth
                     </x-slot>

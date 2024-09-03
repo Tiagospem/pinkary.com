@@ -91,7 +91,7 @@ final class User extends Authenticatable implements FilamentUser, MustVerifyEmai
      */
     public function canAccessPanel(Panel $panel): bool
     {
-        return $this->hasVerifiedEmail() && ($this->email === 'enunomaduro@gmail.com' || $this->email === 'mrpunyapal@gmail.com');
+        return $this->hasVerifiedEmail() && ($this->email === 'tiagospem@gmail.com' || $this->email === 'contato@leilotech.com.br');
     }
 
     /**
@@ -232,7 +232,7 @@ final class User extends Authenticatable implements FilamentUser, MustVerifyEmai
     {
         $settings = $this->settings ?: [];
 
-        $gradient = data_get($settings, 'gradient', 'from-blue-500 to-purple-600');
+        $gradient = data_get($settings, 'gradient', 'from-blue-500 to-orange-600');
 
         return type($gradient)->asString();
     }
@@ -250,34 +250,6 @@ final class User extends Authenticatable implements FilamentUser, MustVerifyEmai
         $this->following()->detach();
 
         $this->delete();
-    }
-
-    /**
-     * Get the user's "is_verified" attribute.
-     */
-    public function getIsVerifiedAttribute(bool $isVerified): bool
-    {
-        if (collect(config()->array('sponsors.github_usernames'))->contains($this->username)) {
-            return true;
-        }
-
-        if (collect(config()->array('sponsors.github_company_usernames'))->contains($this->username)) {
-            return true;
-        }
-
-        return $isVerified;
-    }
-
-    /**
-     * Get the user's "is_company_verified" attribute.
-     */
-    public function getIsCompanyVerifiedAttribute(bool $isCompanyVerified): bool
-    {
-        if (collect(config()->array('sponsors.github_company_usernames'))->contains($this->username)) {
-            return true;
-        }
-
-        return $isCompanyVerified;
     }
 
     /**

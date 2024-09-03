@@ -6,11 +6,11 @@
 <section>
     <header>
         <h2 class="text-lg font-medium text-slate-400">
-            {{ __('Profile Information') }}
+            {{ __('Informações do perfil') }}
         </h2>
 
         <p class="mt-1 text-sm text-slate-500">
-            {{ __("Update your account's profile information and email address.") }}
+            {{ __("Atualize as informações do perfil da sua conta e o endereço de e-mail.") }}
         </p>
     </header>
 
@@ -33,7 +33,7 @@
         <div>
             <x-input-label
                 for="name"
-                :value="__('Name')"
+                :value="__('Nome')"
             />
             <x-text-input
                 id="name"
@@ -53,7 +53,7 @@
         <div>
             <x-input-label
                 for="username"
-                :value="__('Username')"
+                :value="__('Usuário')"
             />
             <x-text-input
                 id="username"
@@ -73,7 +73,7 @@
         <div>
             <x-input-label
                 for="email"
-                :value="__('Email')"
+                :value="__('E-mail')"
             />
             <x-text-input
                 id="email"
@@ -92,13 +92,13 @@
             @if ($user instanceof MustVerifyEmail && ! $user->hasVerifiedEmail())
                 <div>
                     <p class="mt-2 text-sm text-slate-500">
-                        {{ __('Your email address is unverified.') }}
+                        {{ __('Seu endereço de e-mail não está verificado.') }}
 
                         <button
                             form="send-verification"
                             class="rounded-md text-sm text-slate-500 hover:underline focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                         >
-                            {{ __('Click here to re-send the verification email.') }}
+                            {{ __('Clique aqui para re-enviar o e-mail de verificação.') }}
                         </button>
                     </p>
                 </div>
@@ -128,7 +128,7 @@
         <div>
             <x-input-label
                 for="mail_preference_time"
-                :value="__('Mail Preference Time')"
+                :value="__('Hora de Preferência de E-mail')"
             />
             <x-select-input
                 id="mail_preference_time"
@@ -148,13 +148,13 @@
         <div>
             <x-input-label
                 for="prefers_anonymous_questions"
-                :value="__('How would you like to do questions by default?')"
+                :value="__('Como você gostaria de responder a perguntas por padrão?')"
             />
             <x-select-input
                 id="prefers_anonymous_questions"
                 name="prefers_anonymous_questions"
                 class="mt-1 block w-full"
-                :options="[true => 'Anonymously', false => 'Publicly']"
+                :options="[true => 'Anônimamente', false => 'Publico']"
                 :value="old('prefers_anonymous_questions', $user->prefers_anonymous_questions)"
                 required
             />
@@ -165,7 +165,7 @@
         </div>
 
         <div class="flex items-center gap-4">
-            <x-primary-button>{{ __('Save') }}</x-primary-button>
+            <x-primary-button>{{ __('Salvar') }}</x-primary-button>
         </div>
     </form>
 </section>

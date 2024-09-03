@@ -15,7 +15,7 @@ test('displays no notifications by default', function () {
     $component = Livewire::actingAs($user)->test(Show::class);
 
     $component->assertDontSeeHtml([<<<'HTML'
-                <span class="bg-purple-600 ml-1 rounded-full px-2 py-1 text-xs font-semibold text-white">
+                <span class="bg-orange-600 ml-1 rounded-full px-2 py-1 text-xs font-semibold text-white">
                     0
                 </span>
         HTML,
@@ -31,7 +31,7 @@ test('displays the number of notifications', function () {
     $component = Livewire::actingAs($question->to)->test(Show::class);
 
     $component->assertSeeHtml([<<<'HTML'
-                <span class="bg-purple-600 ml-1 rounded-full px-2 py-1 text-xs font-semibold text-white">
+                <span class="bg-orange-600 ml-1 rounded-full px-2 py-1 text-xs font-semibold text-white">
                     1
                 </span>
         HTML,
@@ -50,7 +50,7 @@ test('displays 20+ notifications when there are more than 20', function () {
     $component = Livewire::actingAs($user)->test(Show::class);
 
     $component->assertSeeHtml([<<<'HTML'
-                <span class="bg-purple-600 ml-1 rounded-full px-2 py-1 text-xs font-semibold text-white">
+                <span class="bg-orange-600 ml-1 rounded-full px-2 py-1 text-xs font-semibold text-white">
                     20+
                 </span>
         HTML,

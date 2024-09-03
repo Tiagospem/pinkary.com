@@ -5,9 +5,9 @@
     <div class="p-10" x-on:open-modal.window="$event.detail == 'followers' ? $wire.set('isOpened', true) : null">
         <div>
             @if ($followers->count())
-                <strong> <span>@</span>{{ $user->username }} followers </strong>
+                <strong> <span>@</span>{{ $user->username }} seguidores </strong>
             @else
-                <strong> <span>@</span>{{ $user->username }} does not have any followers </strong>
+                <strong> <span>@</span>{{ $user->username }} não tem nenhum seguidor </strong>
             @endif
         </div>
 
@@ -50,7 +50,7 @@
                                         {{ '@'.$follower->username }}
                                         @if (auth()->user()?->isNot($user) && $follower->is_follower)
                                             <x-badge class="ml-1">
-                                                Follows you
+                                                Segue você
                                             </x-badge>
                                         @endif
                                     </p>

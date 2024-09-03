@@ -15,7 +15,7 @@
         <div>
             <x-input-label
                 for="name"
-                :value="__('Name')"
+                :value="__('Nome')"
             />
             <x-text-input
                 id="name"
@@ -36,7 +36,7 @@
         <div class="mt-4">
             <x-input-label
                 for="username"
-                :value="__('Username')"
+                :value="__('Apelido')"
             />
             <x-text-input
                 id="username"
@@ -57,7 +57,7 @@
         <div class="mt-4">
             <x-input-label
                 for="email"
-                :value="__('Email')"
+                :value="__('E-mail')"
             />
             <x-text-input
                 id="email"
@@ -77,7 +77,7 @@
         <div class="mt-4">
             <x-input-label
                 for="password"
-                :value="__('Password')"
+                :value="__('Senha')"
             />
 
             <x-text-input
@@ -98,7 +98,7 @@
         <div class="mt-4">
             <x-input-label
                 for="password_confirmation"
-                :value="__('Confirm Password')"
+                :value="__('Confirme a senha')"
             />
 
             <x-text-input
@@ -122,22 +122,22 @@
                     id="terms"
                     name="terms"
                     type="checkbox"
-                    class="mr-2 h-4 w-4 rounded border-gray-300 text-pink-600 focus:ring-pink-600"
+                    class="mr-2 h-4 w-4 rounded border-gray-300 text-orange-600 focus:ring-orange-600"
                 />
 
                 <x-input-label for="terms">
-                    By signing up, I confirm that I am at least 18 years old and accept the
+                    Ao se inscrever, eu confirmo que tenho pelo menos 18 anos e aceito os Termos e Condições e a Política de Privacidade.
                     <a
                         target="_blank"
                         href="{{ route('terms') }}"
-                        class="text-pink-500 underline hover:no-underline"
-                        >Terms of Service</a
+                        class="text-orange-500 underline hover:no-underline"
+                        >Termos de Serviço</a
                     >
-                    and
+                    e
                     <a
                         href="{{ route('privacy') }}"
-                        class="text-pink-500 underline hover:no-underline"
-                        >Privacy Policy</a
+                        class="text-orange-500 underline hover:no-underline"
+                        >Politica de Privacidade</a
                     >.
                 </x-input-label>
             </div>
@@ -163,19 +163,19 @@
 
         <div class="mt-4 flex items-center justify-end space-x-3.5 text-sm">
             <div>
-                <span class="text-slate-500">Already have an account?</span>
+                <span class="text-slate-500">Já possui um cadastro?</span>
 
                 <a
                     class="rounded-md text-sm text-slate-200 underline hover:no-underline focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2"
                     href="{{ route('login') }}"
                     wire:navigate
                 >
-                    {{ __(' Sign in here') }}
+                    {{ __(' Entre aqui') }}
                 </a>
             </div>
 
             <x-primary-button>
-                {{ __('Register') }}
+                {{ __('Registrar') }}
             </x-primary-button>
         </div>
     </form>

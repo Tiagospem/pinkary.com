@@ -9,7 +9,7 @@
                 x-init="if ($wire.focusInput) $refs.searchInput.focus()"
                 wire:model.live.debounce.500ms="query"
                 name="q"
-                placeholder="Search for users..."
+                placeholder="Procure usuários..."
                 class="w-full !rounded-2xl !bg-slate-950 !bg-opacity-80 py-3 pl-14"
             />
         </div>
@@ -17,7 +17,7 @@
 
     @if ($users->isEmpty())
         <section class="rounded-lg">
-            <p class="my-8 text-center text-lg text-slate-500">No users found.</p>
+            <p class="my-8 text-center text-lg text-slate-500">Nenhum usuário encontrado.</p>
         </section>
     @else
         <section class="max-w-2xl">

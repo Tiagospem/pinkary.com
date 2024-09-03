@@ -6,17 +6,19 @@
             wire:navigate
         >
             <x-icons.chevron-left class="size-4" />
-            <span>Back</span>
+            <span>Voltar</span>
         </a>
 
         <div class="mt-6">
             <div class="prose prose-slate prose-invert mx-auto max-w-4xl">
-                <h1>Support</h1>
-                <p><strong>Last Updated: 02 March 2024</strong></p>
+                <h1>Suporte</h1>
+                <p><strong>Última Atualização: 02 de março de 2024</strong></p>
 
                 <p>
-                    If you have any questions or need help, please feel free to contact us at <a href="mailto:team@pinkary.com">team@pinkary.com</a> .
+                    Se você tiver alguma dúvida ou precisar de ajuda, sinta-se à vontade para entrar em contato conosco pelo e-mail
+                    <a href="mailto:contato@leilotech.com.br">contato@leilotech.com.br</a>.
                 </p>
+
             </div>
         </div>
     </div>

@@ -1,11 +1,11 @@
 <section class="space-y-6">
     <header>
         <h2 class="text-lg font-medium text-slate-400">
-            {{ __('Two factor authentication') }}
+            {{ __('Autenticação de dois fatores') }}
         </h2>
 
         <p class="mt-1 text-sm text-slate-500">
-            {{ __('Add additional security to your account using two factor authentication.') }}
+            {{ __('Adicione segurança adicional à sua conta usando a autenticação de dois fatores.') }}
         </p>
     </header>
 
@@ -13,18 +13,18 @@
         <h3 class="text-lg font-medium text-slate-300">
             @if ($enabled)
                 @if ($showingConfirmation)
-                    {{ __('Finish enabling two factor authentication.') }}
+                    {{ __('Conclua a ativação da autenticação de dois fatores.') }}
                 @else
-                    {{ __('You have enabled two factor authentication.') }}
+                    {{ __('Você ativou a autenticação de dois fatores.') }}
                 @endif
             @else
-                {{ __('You have not enabled two factor authentication.') }}
+                {{ __('Você não ativou a autenticação de dois fatores.') }}
             @endif
         </h3>
 
         <div class="mt-3 max-w-xl text-sm text-slate-500">
             <p>
-                {{ __('When two factor authentication is enabled, you will be prompted for a secure, random token during authentication. You may retrieve this token from your phone\'s Google Authenticator application.') }}
+                {{ __('Quando a autenticação de dois fatores estiver ativada, você será solicitado a fornecer um token seguro e aleatório durante a autenticação. Você pode recuperar esse token no aplicativo Google Authenticator do seu telefone.') }}
             </p>
         </div>
 
@@ -33,9 +33,9 @@
                 <div class="mt-4 max-w-xl text-sm text-slate-500">
                     <p class="font-semibold">
                         @if ($showingConfirmation)
-                            {{ __('To finish enabling two factor authentication, scan the following QR code using your phone\'s authenticator application or enter the setup key and provide the generated OTP code.') }}
+                            {{ __('Para concluir a ativação da autenticação de dois fatores, escaneie o código QR a seguir usando o aplicativo autenticador do seu telefone ou insira a chave de configuração e forneça o código OTP gerado.') }}
                         @else
-                            {{ __('Two factor authentication is now enabled. Scan the following QR code using your phone\'s authenticator application or enter the setup key.') }}
+                            {{ __('A autenticação de dois fatores está agora ativada. Escaneie o código QR a seguir usando o aplicativo autenticador do seu telefone ou insira a chave de configuração.') }}
                         @endif
                     </p>
                 </div>
@@ -64,7 +64,7 @@
             @if ($showingRecoveryCodes)
                 <div class="mt-4 max-w-xl text-sm text-slate-500">
                     <p class="font-semibold">
-                        {{ __('Store these recovery codes in a secure password manager. They can be used to recover access to your account if your two factor authentication device is lost.') }}
+                        {{ __('Armazene esses códigos de recuperação em um gerenciador de senhas seguro. Eles podem ser usados para recuperar o acesso à sua conta caso seu dispositivo de autenticação de dois fatores seja perdido.') }}
                     </p>
                 </div>
 
@@ -80,29 +80,29 @@
             @if (!$enabled)
                 <x-primary-button type="button" wire:loading.attr="disabled"
                     wire:click="enableTwoFactorAuthentication">
-                    {{ __('Enable') }}
+                    {{ __('Habilitar') }}
                 </x-primary-button>
             @else
                 @if ($showingRecoveryCodes)
                     <x-secondary-button class="me-3" wire:click="regenerateRecoveryCodes">
-                        {{ __('Regenerate Recovery Codes') }}
+                        {{ __('Regenerar Códigos de Recuperação') }}
                     </x-secondary-button>
                 @elseif($showingConfirmation)
                     <x-secondary-button class="me-3" wire:click="confirmTwoFactorAuthentication">
-                        {{ __('Confirm') }}
+                        {{ __('Confirmar') }}
                     </x-secondary-button>
                 @else
                     <x-secondary-button class="me-3" wire:click="showRecoveryCodes">
-                        {{ __('Show Recovery Codes') }}
+                        {{ __('Mostrar Códigos de Recuperação') }}
                     </x-secondary-button>
                 @endif
 
                 <x-danger-button type="button" wire:loading.attr="disabled"
                     wire:click="disableTwoFactorAuthentication">
                     @if ($showingConfirmation)
-                        {{ __('Cancel') }}
+                        {{ __('Cancelar') }}
                     @else
-                        {{ __('Disable') }}
+                        {{ __('Desabilitar') }}
                     @endif
                 </x-danger-button>
             @endif

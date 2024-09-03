@@ -7,13 +7,13 @@
                 :inIndex="true"
             />
         @empty
-            <div class="text-center text-slate-400">There are no questions to show.</div>
+            <div class="text-center text-slate-400">Não há perguntas para exibir.</div>
         @endforelse
 
         <x-load-more-button
             :perPage="$perPage"
             :paginator="$questions"
-            message="There are no more questions to load, or you have scrolled too far."
+            message="Não há mais perguntas para carregar, ou você rolou para longe demais."
         />
     </section>
 </div>

@@ -14,7 +14,7 @@
                         wire:model="answer"
                         x-autosize
                         class="h-24 w-full resize-none border-none border-transparent bg-transparent text-white focus:border-transparent focus:outline-0 focus:ring-0"
-                        placeholder="Write your answer..."
+                        placeholder="Digite algo..."
                         maxlength="1000"
                         rows="3"
                     ></textarea>
@@ -34,7 +34,7 @@
                             class="text-{{ $user->left_color }} border-{{ $user->left_color }}"
                             type="submit"
                         >
-                            {{ __('Send') }}
+                            {{ __('Enviar') }}
                         </x-primary-colorless-button>
                         @if (! $question->is_reported)
                             @if (! $question->answer)
@@ -43,14 +43,14 @@
                                     wire:confirm="Are you sure you want to ignore this question?"
                                     class="text-slate-400 hover:text-slate-500 focus:outline-none"
                                 >
-                                    Ignore
+                                    Ignorar
                                 </button>
                                 <button
                                     wire:click.prevent="report"
                                     wire:confirm="Are you sure you want to report this question?"
                                     class="text-slate-400 hover:text-red-500 focus:outline-none"
                                 >
-                                    Report
+                                    Reportar
                                 </button>
                             @endif
                         @endif

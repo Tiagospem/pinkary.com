@@ -8,7 +8,7 @@
                             <span>?</span>
                         </div>
 
-                        <p class="font-medium">Anonymously</p>
+                        <p class="font-medium">De forma anônima</p>
                     </div>
                 @else
                     <x-avatar-with-name :user="$question->from" />
@@ -127,7 +127,7 @@
                                     class="flex items-center gap-1.5"
                                 >
                                     <x-heroicon-o-trash class="h-4 w-4" />
-                                    <span>Delete</span>
+                                    <span>Deletar</span>
                                 </x-dropdown-button>
                             @endif
                         </x-slot>
@@ -166,7 +166,7 @@
                     <button
                         data-navigate-ignore="true"
                         @click="showButtonAction"
-                        class="text-sm text-pink-500 flex ml-auto"
+                        class="text-sm text-orange-500 flex ml-auto"
                         x-text="showMoreButtonText"
                     ></button>
                 </div>
@@ -185,7 +185,7 @@
                         @endif
                         title="{{ Number::format($question->children_count) }} {{ str('Comment')->plural($question->children_count) }}"
                         @class([
-                            "flex items-center transition-colors group-hover:text-pink-500 hover:text-slate-400 focus:outline-none",
+                            "flex items-center transition-colors group-hover:text-orange-500 hover:text-slate-400 focus:outline-none",
                             "cursor-pointer" => ! $commenting,
                         ])
                     >
@@ -251,7 +251,7 @@
                         title="{{ $timestamp->timezone(session()->get('timezone', 'UTC'))->isoFormat('ddd, D MMMM YYYY HH:mm') }}"
                         datetime="{{ $timestamp->timezone(session()->get('timezone', 'UTC'))->toIso8601String() }}"
                     >
-                        {{  $question->answer_updated_at ? 'Edited:' : null }}
+                        {{  $question->answer_updated_at ? 'Editado:' : null }}
                         {{
                             $timestamp->timezone(session()->get('timezone', 'UTC'))
                                 ->diffForHumans(short: true)
@@ -289,7 +289,7 @@
                         <x-slot name="trigger">
                             <button
                                 data-navigate-ignore="true"
-                                x-bind:class="{ 'text-pink-500 hover:text-pink-600': open,
+                                x-bind:class="{ 'text-orange-500 hover:text-orange-600': open,
                                                 'text-slate-500 hover:text-slate-400': !open }"
                                 title="Share"
                                 class="flex items-center transition-colors duration-150 ease-in-out focus:outline-none"

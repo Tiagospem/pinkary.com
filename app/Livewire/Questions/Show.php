@@ -130,7 +130,7 @@ final class Show extends Component
         ]);
 
         if ($bookmark->wasRecentlyCreated) {
-            $this->dispatch('notification.created', message: 'Bookmark added.');
+            $this->dispatch('notification.created', message: 'Marcador adicionado.');
         }
     }
 

@@ -16,11 +16,11 @@
 }'>
     <header>
         <h2 class="text-lg font-medium text-slate-400">
-            {{ __('Profile Photo') }}
+            {{ __('Foto do Perfil') }}
         </h2>
 
         <p class="mb-4 mt-1 text-sm text-slate-500">
-            {{ __('Upload a profile photo to personalize your account.') }}
+            {{ __('Envie uma foto de perfil para personalizar sua conta.') }}
         </p>
     </header>
     <div class="flex flex-col items-center gap-2 sm:flex-row sm:gap-4">
@@ -36,14 +36,14 @@
         @if (auth()->user()->is_uploaded_avatar)
             <div class="flex gap-2">
                 <p class="text-sm text-slate-500">
-                    {{ __('If you delete your uploaded avatar, we will try to fetch your image using our avatar service') }}
+                    {{ __('Se você excluir o avatar enviado, tentaremos buscar sua imagem usando nosso serviço de avatar.') }}
                 </p>
             </div>
         @else
             <div class="flex gap-2">
                 <p class="text-sm text-slate-500">
-                    @php($message = auth()->user()->github_username ? 'GitHub or' : '')
-                    {{ __("You can click the button below to fetch your avatar from your {$message} Gravatar account") }}
+                    @php($message = auth()->user()->github_username ? 'GitHub ou' : '')
+                    {{ __("Você pode clicar no botão abaixo para buscar seu avatar da sua conta {$message} Gravatar.") }}
                 </p>
             </div>
         @endif
@@ -69,7 +69,7 @@
                 id="avatar"
                 name="avatar"
                 x-on:change="checkFileSize($event.target)"
-                class="mt-4 block w-full border text-sm file:mr-4 file:border-0 file:bg-pink-200 file:px-4 file:py-2 file:text-xs file:font-semibold file:tracking-widest file:text-pink-700 file:transition-colors hover:file:bg-pink-100 focus:outline-none focus:ring-0"
+                class="mt-4 block w-full border text-sm file:mr-4 file:border-0 file:bg-orange-200 file:px-4 file:py-2 file:text-xs file:font-semibold file:tracking-widest file:text-orange-700 file:transition-colors hover:file:bg-orange-100 focus:outline-none focus:ring-0"
             />
             <div x-show="errors.length > 0" class="mt-4">
                 <template x-for="(error, index) in errors" :key="index">
@@ -92,7 +92,7 @@
             @method('delete')
 
             <x-secondary-button type="submit">
-                {{ auth()->user()->is_uploaded_avatar ? __('Delete Uploaded Avatar') : __('Re-fetch Avatar') }}
+                {{ auth()->user()->is_uploaded_avatar ? __('Excluir Avatar Enviado') : __('Buscar Avatar Novamente') }}
             </x-secondary-button>
         </form>
     </div>

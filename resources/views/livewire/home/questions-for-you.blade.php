@@ -2,7 +2,7 @@
     @if ($forYouQuestions->isEmpty())
         <section class="rounded-lg">
             <p class="my-8 text-center text-lg text-slate-500">
-                We haven't found any questions that may interest you based on the activity you've done on Pinkary.
+                Não encontramos nenhuma pergunta que possa lhe interessar com base na atividade que você realizou no Toplance.
             </p>
         </section>
     @else
@@ -19,7 +19,7 @@
             <x-load-more-button
                 :perPage="$perPage"
                 :paginator="$forYouQuestions"
-                message="There are no more questions to load, or you have scrolled too far."
+                message="Não há mais perguntas para carregar, ou você rolou muito para baixo."
             />
         </section>
     @endif

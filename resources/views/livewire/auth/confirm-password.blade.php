@@ -5,7 +5,7 @@
     >
     <div class="p-6 rounded-lg shadow sm:p-8">
         <div class="mb-4 text-sm text-slate-400">
-            {{ __('This is a secure area of the application. Please confirm your password before continuing.') }}
+            {{ __('Esta é uma área segura da aplicação. Por favor, confirme sua senha antes de continuar.') }}
         </div>
 
         <form
@@ -14,7 +14,7 @@
             <div>
                 <x-input-label
                     for="password"
-                    :value="__('Password')"
+                    :value="__('Senha')"
                 />
 
                 <x-text-input
@@ -35,14 +35,14 @@
 
             <div class="mt-4 flex justify-end">
                 <x-primary-button>
-                    {{ __('Confirm') }}
+                    {{ __('confirmar') }}
                 </x-primary-button>
                 <x-secondary-button
                     type="button"
                     x-on:click="$dispatch('close-modal', 'confirm-password')"
                     class="ml-2"
                 >
-                    {{ __('Cancel') }}
+                    {{ __('Cancelar') }}
                 </x-secondary-button>
             </div>
         </form>

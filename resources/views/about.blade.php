@@ -17,7 +17,7 @@
                 href="{{ route('profile.show', ['username' => auth()->user()->username]) }}"
                 wire:navigate
             >
-                <x-primary-button>Your Profile</x-primary-button>
+                <x-primary-button>Seu perfil</x-primary-button>
             </a>
         @else
             <a
@@ -30,7 +30,7 @@
                 href="{{ route('register') }}"
                 wire:navigate
             >
-                <x-primary-button>Register</x-primary-button>
+                <x-primary-button>Registrar</x-primary-button>
             </a>
         @endauth
     </nav>
@@ -41,14 +41,14 @@
                 href="{{ route('about') }}"
                 wire:navigate
             >
-                <x-pinkary-logo class="z-10 w-72" />
+                <x-toplance-logo class="z-10 w-48" />
             </a>
 
             <div
-                class="mt-5 rounded-full bg-pink-500 bg-opacity-90 px-3 py-1.5 font-mona text-sm font-medium uppercase text-slate-900"
+                class="mt-5 rounded-full bg-orange-500 bg-opacity-90 px-3 py-1.5 font-mona text-sm font-medium uppercase text-slate-900"
                 style="font-stretch: 120%"
             >
-                One link. All your socials.
+                Um link. Todas as suas redes sociais.
             </div>
         </section>
 
@@ -56,9 +56,8 @@
             class="mt-12 max-w-4xl text-center font-mona text-3xl font-light md:text-4xl"
             style="font-stretch: 120%"
         >
-            Create a landing page for all your links and connect with like-minded people
-            <span class="text-pink-500">without the noise</span>
-            .
+            Crie uma landing page para todos os seus links e conecte-se com pessoas afins
+            <span class="text-orange-500">sem distrações</span>.
         </h2>
 
         <section class="mt-28 w-full max-w-2xl">
@@ -68,8 +67,8 @@
                         <x-heroicon-o-bolt class="h-5 w-5" />
                     </div>
 
-                    <h3>Create a profile</h3>
-                    <p class="text-slate-400">Choose a username, add a bio, and you're good to go.</p>
+                    <h3>Crie um perfil</h3>
+                    <p class="text-slate-400">Escolha um nome de usuário, adicione uma bio e pronto.</p>
                 </div>
 
                 <div class="rounded-2xl border-t border-slate-800 bg-slate-900 p-4 md:aspect-video">
@@ -77,8 +76,8 @@
                         <x-heroicon-o-link class="h-5 w-5" />
                     </div>
 
-                    <h3>Share your links</h3>
-                    <p class="text-slate-400">Collect links of your social profiles, your work, and what matters to you.</p>
+                    <h3>Compartilhe seus links</h3>
+                    <p class="text-slate-400">Colete links dos seus perfis sociais, seu trabalho e o que é importante para você.</p>
                 </div>
 
                 <div class="rounded-2xl border-t border-slate-800 bg-slate-900 p-4 md:aspect-video">
@@ -86,8 +85,8 @@
                         <x-heroicon-o-chat-bubble-oval-left class="h-5 w-5" />
                     </div>
 
-                    <h3>Ask and answer questions</h3>
-                    <p class="text-slate-400">Engage with the community in an open and friendly way.</p>
+                    <h3>Faça e responda perguntas</h3>
+                    <p class="text-slate-400">Interaja com a comunidade de forma aberta e amigável.</p>
                 </div>
 
                 <div class="rounded-2xl border-t border-slate-800 bg-slate-900 p-4 md:aspect-video">
@@ -95,8 +94,8 @@
                         <x-heroicon-o-globe-americas class="h-5 w-5" />
                     </div>
 
-                    <h3>Discover</h3>
-                    <p class="text-slate-400">keep an eye on the people you admire, and expand your circle.</p>
+                    <h3>Descubra</h3>
+                    <p class="text-slate-400">Fique de olho nas pessoas que você admira e amplie seu círculo.</p>
                 </div>
             </div>
         </section>
@@ -109,8 +108,8 @@
             </div>
 
             <div class="order-1 flex cursor-pointer flex-col items-center justify-center transition-transform duration-700 sm:max-w-md md:order-2 md:-translate-y-10 md:translate-x-10 md:items-start md:hover:-translate-y-5 md:hover:translate-x-5">
-                <h2 class="mb-2 w-full font-semibold">Lots of interesting profiles.</h2>
-                <p class="text-slate-400">On pinkary you can find old friends or meet new interesting profiles.</p>
+                <h2 class="mb-2 w-full font-semibold">Muitos perfis interessantes.</h2>
+                <p class="text-slate-400">No Toplance, você pode encontrar amigos antigos ou conhecer novos perfis interessantes.</p>
                 <svg
                     class="ml-16 mt-10 hidden h-auto w-24 -rotate-45 md:block"
                     viewBox="0 0 251 81"
@@ -134,8 +133,8 @@
             <div class="absolute -right-20 top-0 -z-10 h-56 w-56 rotate-180 rounded-full bg-gradient-to-r from-teal-500 via-transparent to-emerald-300 blur-3xl"></div>
 
             <div class="flex cursor-pointer flex-col items-center justify-center text-left transition-transform duration-700 sm:max-w-md md:-translate-x-10 md:-translate-y-10 md:items-end md:text-right md:hover:-translate-x-5 md:hover:-translate-y-5">
-                <h2 class="mb-2 w-full font-semibold">Any questions or thanks?</h2>
-                <p class="w-full text-slate-400">Pinkary has a simple and direct way to communicate, even anonymously.</p>
+                <h2 class="mb-2 w-full font-semibold">Alguma dúvida ou agradecimento?</h2>
+                <p class="w-full text-slate-400">O Toplance tem uma forma simples e direta de comunicação, mesmo que de forma anônima.</p>
 
                 <svg
                     class="mr-16 mt-12 hidden h-auto w-20 rotate-45 md:block"
@@ -174,31 +173,13 @@
             </div>
         </section>
 
-        <div class="mt-28 flex max-w-2xl flex-col items-center gap-4 py-4 text-2xl font-light">
-            <div class="animate-pulse">
-                <x-heroicon-o-light-bulb class="h-8 w-8" />
-            </div>
-
-            <h2 class="text-center">
-                Pinkary is now open-source! You can get early access by
-                <a
-                    href="https://github.com/sponsors/nunomaduro"
-                    target="_blank"
-                    class="underline hover:no-underline"
-                >
-                    sponsoring the project on GitHub
-                </a>
-                .
-            </h2>
-        </div>
-
         <section class="mb-16 mt-40 flex flex-col items-center gap-8">
             @auth
                 <h3
                     class="mb-4 w-full max-w-2xl text-center font-mona text-3xl font-light md:text-4xl"
                     style="font-stretch: 120%"
                 >
-                    Thank you for being part of this community!
+                    Obrigado por fazer parte desta comunidade!
                 </h3>
             @else
                 <h3
@@ -209,9 +190,10 @@
                         href="{{ route('register') }}"
                         wire:navigate
                         class="underline hover:no-underline"
-                        >Join</a
+                    >Junte-se</a
                     >
-                    this growing community!
+                    a esta comunidade em crescimento!
+
                 </h3>
             @endauth
 

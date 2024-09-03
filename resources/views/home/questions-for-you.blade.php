@@ -7,7 +7,7 @@
                 <livewire:home.questions-for-you :focus-input="true" />
             @else
                 <div class="mb-4">
-                    <div class="mb-4">Log in or sign up to access personalized content.</div>
+                    <div class="mb-4">Faça login ou crie uma conta para acessar conteúdo personalizado.</div>
 
                     <a
                         href="{{ route('login') }}"
@@ -19,7 +19,7 @@
                         href="{{ route('register') }}"
                         wire:navigate
                     >
-                        <x-primary-button>Register</x-primary-button>
+                        <x-primary-button>Registrar</x-primary-button>
                     </a>
                 </div>
             @endauth

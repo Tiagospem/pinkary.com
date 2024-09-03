@@ -9,7 +9,7 @@
 />
 <meta
     name="author"
-    content="Pinkary"
+    content="Toplance"
 />
 <meta
     name="google"
@@ -23,7 +23,7 @@
 />
 <meta
     name="description"
-    content="{{ config('app.name', 'Pinkary') }} - One Link. All Your Socials."
+    content="{{ config('app.name', 'Toplance') }} - Um Link. Todas as Suas Redes Sociais."
     data-rh="true"
 />
 <meta
@@ -38,7 +38,7 @@
 />
 <meta
     name="keywords"
-    content="Pinkary, pinkary, links, link, cv, portfolio, aggregation, platform, social, media, profile, bio, tree"
+    content="Toplance, Toplance, links, link, cv, portfolio, aggregation, platform, social, media, profile, bio, tree"
     data-rh="true"
 />
 <meta
@@ -47,7 +47,7 @@
 />
 <meta
     name="apple-mobile-web-app-title"
-    content="Pinkary"
+    content="Toplance"
 />
 <meta
     name="apple-mobile-web-app-status-bar-style"
@@ -56,12 +56,12 @@
 
 <link
     rel="shortcut icon"
-    href="https://pinkary.com/img/ico.svg"
+    href="{{ config('app.url').'/favicon.ico' }}"
     type="image/x-icon"
 />
 <link
     rel="manifest"
-    href="/manifest.json"
+    href="/site.webmanifest"
 />
 
 <meta
@@ -70,7 +70,7 @@
 />
 
 <meta
-    content="Pinkary"
+    content="Toplance"
     property="og:site_name"
 />
 <meta
@@ -84,7 +84,7 @@
         $user = request()->route('username');
     @endphp
 
-    <title>{{ $user->name }} ({{ '@'.$user->username }}) / Pinkary</title>
+    <title>{{ $user->name }} ({{ '@'.$user->username }}) / Toplance</title>
     <meta
         property="og:type"
         content="profile"
@@ -97,7 +97,7 @@
     />
     <meta
         property="og:title"
-        content="{{ $user->name }} ({{ '@'.$user->username }}) / Pinkary"
+        content="{{ $user->name }} ({{ '@'.$user->username }}) / Toplance"
         data-rh="true"
     />
     <meta
@@ -119,7 +119,7 @@
         $content = $toMeta($question->content);
         $answer = $question->answer ? $toMeta($question->answer) : null;
         $isSharedUpdate = $question->isSharedUpdate();
-        $ogTitle = ($isSharedUpdate ? $question->to->name.' On Pinkary' : $question->to->name.': "'.$answer.'" / Pinkary');
+        $ogTitle = ($isSharedUpdate ? $question->to->name.' On Toplance' : $question->to->name.': "'.$answer.'" / Toplance');
         $ogDescription = ($isSharedUpdate ? $answer : ($question->anonymously ? 'Question' : 'Question from '.$question->from->name).': "'.$content.'"');
     @endphp
 
@@ -145,22 +145,22 @@
     />
 
     @if ($answer)
-        <title>{{ $question->to->name }}: "{!! $answer !!}" / Pinkary</title>
+        <title>{{ $question->to->name }}: "{!! $answer !!}" / Toplance</title>
         <meta
             property="og:title"
             content='{{ $ogTitle }}'
             data-rh="true"
         />
     @else
-        <title>{{ config('app.name', 'Pinkary') }} - One Link. All Your Socials.</title>
+        <title>{{ config('app.name', 'Toplance') }} - Um Link. Todas as Suas Redes Sociais.</title>
         <meta
             property="og:title"
-            content="{{ config('app.name', 'Pinkary') }} - One Link. All Your Socials."
+            content="{{ config('app.name', 'Toplance') }} - Um Link. Todas as Suas Redes Sociais."
             data-rh="true"
         />
     @endif
 @else
-    <title>{{ config('app.name', 'Pinkary') }} - One Link. All Your Socials.</title>
+    <title>{{ config('app.name', 'Toplance') }} - Um Link. Todas as Suas Redes Sociais.</title>
     <meta
         property="og:type"
         content="website"
@@ -168,17 +168,17 @@
     />
     <meta
         property="og:title"
-        content="{{ config('app.name', 'Pinkary') }} - One Link. All Your Socials."
+        content="{{ config('app.name', 'Toplance') }} - Um Link. Todas as Suas Redes Sociais."
         data-rh="true"
     />
     <meta
         property="og:description"
-        content="{{ config('app.name', 'Pinkary') }} - One Link. All Your Socials."
+        content="{{ config('app.name', 'Toplance') }} - Um Link. Todas as Suas Redes Sociais."
         data-rh="true"
     />
     <meta
         property="og:image"
-        content="https://pinkary.com/img/logo-mid.png"
+        content="{{ config('app.url').'/img/logo-mid.png' }}"
         data-rh="true"
     />
 @endif

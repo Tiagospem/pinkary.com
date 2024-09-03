@@ -14,7 +14,7 @@
         <div>
             <x-input-label
                 for="email"
-                :value="__('Email')"
+                :value="__('E-mail')"
             />
             <x-text-input
                 id="email"
@@ -35,7 +35,7 @@
         <div class="mt-4">
             <x-input-label
                 for="password"
-                :value="__('Password')"
+                :value="__('Nova senha')"
             />
             <x-text-input
                 id="password"
@@ -54,7 +54,7 @@
         <div class="mt-4">
             <x-input-label
                 for="password_confirmation"
-                :value="__('Confirm Password')"
+                :value="__('Confirme a senha')"
             />
 
             <x-text-input
@@ -74,7 +74,7 @@
 
         <div class="mt-4 flex items-center justify-end">
             <x-primary-button>
-                {{ __('Reset Password') }}
+                {{ __('Redefinir') }}
             </x-primary-button>
         </div>
     </form>

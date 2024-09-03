@@ -36,7 +36,7 @@
                                     class="{{ $question->from->is_company_verified ? 'rounded-md' : 'rounded-full' }} h-10 w-10"
                                 />
                             </figure>
-                            <p>{{ $question->from->name }} commented on your {{ $question->parent->parent_id !== null ? 'comment' : ($question->parent->isSharedUpdate() ? 'Update' : 'Answer') }}:
+                            <p>{{ $question->from->name }} comentou na sua {{ $question->parent->parent_id !== null ? 'resposta' : ($question->parent->isSharedUpdate() ? 'Atualização' : 'Resposta') }}:</p>
                         </div>
                     @elseif ($question->from->is(auth()->user()) && $question->answer !== null)
                         <div class="flex items-center gap-3 text-sm text-slate-500">
@@ -47,7 +47,7 @@
                                     class="{{ $question->to->is_company_verified ? 'rounded-md' : 'rounded-full' }} h-10 w-10"
                                 />
                             </figure>
-                            <p>{{ $question->to->name }} answered your {{ $question->anonymously ? 'anonymous' : '' }} question:</p>
+                            <p>{{ $question->to->name }} respondeu à sua pergunta {{ $question->anonymously ? 'anonima' : '' }}:</p>
                         </div>
                     @else
                         @if ($question->anonymously)
@@ -55,7 +55,7 @@
                                 <div class="border-1 flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full border border-dashed border-slate-400">
                                     <span>?</span>
                                 </div>
-                                <p>Someone asked you anonymously:</p>
+                                <p>Alguém te perguntou anonimamente:</p>
                             </div>
                         @else
                             <div class="flex items-center gap-3 text-sm text-slate-500">
@@ -66,14 +66,14 @@
                                         class="{{ $question->from->is_company_verified ? 'rounded-md' : 'rounded-full' }} h-10 w-10"
                                     />
                                 </figure>
-                                <p>{{ $question->from->name }} asked you:</p>
+                                <p>{{ $question->from->name }} te perguntou:</p>
                             </div>
                         @endif
                     @endif
                 @elseif ($question->parent !== null)
-                    <p class="text-sm text-slate-500">You have been mentioned in a comment by {{ '@' . $question->to->username }}</p>
+                    <p class="text-sm text-slate-500">Você foi mencionado em um comentário por {{ '@' . $question->to->username }}</p>
                 @else
-                    <p class="text-sm text-slate-500">You have been mentioned in a {{ $question->isSharedUpdate() ? 'update by @'.$question->to->username : 'question:'}}</p>
+                    <p class="text-sm text-slate-500">Você foi mencionado em uma {{ $question->isSharedUpdate() ? 'atualização de @'.$question->to->username : 'pergunta:'}}</p>
                 @endif
                 @if(!$question->isSharedUpdate())
                     <p class="mt-2 text-slate-200">
@@ -86,7 +86,7 @@
 
     @if ($notifications->count() === 0)
         <div class="rounded-lg">
-            <p class="text-slate-400">No pending notifications.</p>
+            <p class="text-slate-400">Sem notificações pendentes.</p>
         </div>
     @endif
 </div>

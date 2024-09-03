@@ -19,7 +19,7 @@
                 class="flex text-slate-400 hover:underline cursor-pointer"
             >
                 <x-icons.chevron-left class="h-6 w-6" />
-                <span>Back</span>
+                <span>Voltar</span>
             </a>
 
             @php

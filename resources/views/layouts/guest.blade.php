@@ -23,7 +23,7 @@
                         wire:navigate
                         class="mt-20 flex justify-center"
                     >
-                        <x-pinkary-logo class="z-10 w-48" />
+                        <x-toplance-logo class="z-10 w-48" />
                     </a>
 
                     <div class="mx-auto w-full max-w-md px-4 py-10 sm:px-0">

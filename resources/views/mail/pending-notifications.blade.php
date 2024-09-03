@@ -1,15 +1,15 @@
 <x-mail::message>
-# Hello, {{ $user->name }}!
+    # Olá, {{ $user->name }}!
 
-We've noticed you have {{ $pendingNotificationsCount }} {{ Str::plural('notification', $pendingNotificationsCount) }}. You can view notifications by clicking the button below.
+    Notamos que você tem {{ $pendingNotificationsCount }} {{ Str::plural('notificação', $pendingNotificationsCount) }}. Você pode visualizar as notificações clicando no botão abaixo.
 
-<x-mail::button :url="route('notifications.index')">
-View Notifications
-</x-mail::button>
+    <x-mail::button :url="route('notifications.index')">
+        Ver Notificações
+    </x-mail::button>
 
-If you no longer wish to receive these emails, you can change your "Mail Preference Time" in your [profile settings]({{ route('profile.edit') }}).
+    Se você não quiser mais receber esses e-mails, pode alterar seu "Tempo de Preferência de E-mail" nas [configurações do perfil]({{ route('profile.edit') }}).
 
-See you soon,<br>
-{{ config('app.name') }}
+    Até logo,<br>
+    {{ config('app.name') }}
 
 </x-mail::message>

@@ -108,20 +108,20 @@ final class Create extends Component
                             $aspectRatio = $width / $height;
                             $maxAspectRatio = 2 / 5;
                             if ($aspectRatio < $maxAspectRatio) {
-                                $fail('The image aspect ratio must be less than 2/5.');
+                                $fail('A proporção da imagem deve ser menor que 2/5.');
                             }
                         } else {
-                            $fail('The image aspect ratio could not be determined.');
+                            $fail('A proporção da imagem não pôde ser determinada.');
                         }
                     },
 
                 ],
             ],
             messages: [
-                'images.*.image' => 'The file must be an image.',
-                'images.*.mimes' => 'The image must be a file of type: :values.',
-                'images.*.max' => 'The image may not be greater than :max kilobytes.',
-                'images.*.dimensions' => 'The image must be less than :max_width x :max_height pixels.',
+                'images.*.image' => 'O arquivo deve ser uma imagem.',
+                'images.*.mimes' => 'A imagem deve ser um arquivo do tipo: :values.',
+                'images.*.max' => 'A imagem não pode ter mais de :max kilobytes.',
+                'images.*.dimensions' => 'A imagem deve ter no máximo :max_width x :max_height pixels.',
             ]
         );
     }
@@ -154,9 +154,9 @@ final class Create extends Component
     public function placeholder(): string
     {
         return match (true) {
-            filled($this->parentId) => 'Write a comment...',
-            $this->isSharingUpdate() => 'Share an update...',
-            default => 'Ask a question...'
+            filled($this->parentId) => 'Escreva um comnetário',
+            $this->isSharingUpdate() => 'Compartilhe uma atualização...',
+            default => 'Faça uma pergunta...'
         };
     }
 
@@ -206,13 +206,13 @@ final class Create extends Component
         $user = type($request->user())->as(User::class);
 
         if (! app()->isLocal() && $user->questionsSent()->where('created_at', '>=', now()->subMinute())->count() >= 3) {
-            $this->addError('content', 'You can only send 3 questions per minute.');
+            $this->addError('content', 'Você só pode enviar 3 perguntas por minuto.');
 
             return;
         }
 
         if (! app()->isLocal() && $user->questionsSent()->where('created_at', '>=', now()->subDay())->count() > 30) {
-            $this->addError('content', 'You can only send 30 questions per day.');
+            $this->addError('content', 'Você só pode enviar 30 perguntas por dia.');
 
             return;
         }
@@ -276,8 +276,8 @@ final class Create extends Component
                     originalName: $image->getClientOriginalName()
                 );
             } else { // @codeCoverageIgnoreStart
-                $this->addError('images', 'The image could not be uploaded.');
-                $this->dispatch('notification.created', message: 'The image could not be uploaded.');
+                $this->addError('images', 'A imagem não pôde ser carregada.');
+                $this->dispatch('notification.created', message: 'A imagem não pôde ser carregada.');
             } // @codeCoverageIgnoreEnd
         });
 

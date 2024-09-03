@@ -3,7 +3,7 @@
         <div>
             <x-input-label
                 for="description"
-                :value="__('Description')"
+                :value="__('Descrição')"
             />
             <x-text-input
                 id="description"
@@ -44,14 +44,14 @@
                 class="text-{{ $user->left_color }} border-{{ $user->left_color }}"
                 type="submit"
             >
-                {{ __('Create') }}
+                {{ __('Criar') }}
             </x-primary-colorless-button>
             <button
                 x-on:click="showLinksForm = false"
                 type="button"
                 class="text-slate-400 hover:text-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
             >
-                Cancel
+                Cancelar
             </button>
         </div>
     </div>

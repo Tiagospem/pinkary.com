@@ -47,7 +47,7 @@ final class Edit extends Component
                     'from-blue-500 to-purple-600',
                     'from-blue-500 to-teal-700',
                     'from-red-500 to-orange-600',
-                    'from-purple-500 to-pink-500',
+                    'from-orange-500 to-pink-500',
                     'from-indigo-500 to-lime-700',
                     'from-yellow-600 to-blue-600',
                 ]),
@@ -57,7 +57,7 @@ final class Edit extends Component
         $user->update(['settings' => $validated]);
 
         $this->dispatch('link-settings.updated');
-        $this->dispatch('notification.created', message: 'Link settings updated.');
+        $this->dispatch('notification.created', message: 'Configurações do link atualizadas.');
     }
 
     /**

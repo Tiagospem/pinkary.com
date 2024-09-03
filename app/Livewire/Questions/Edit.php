@@ -55,14 +55,14 @@ final class Edit extends Component
         $originalAnswer = $question->answer ?? null;
 
         if (is_null($question)) {
-            $this->dispatch('notification.created', message: 'Sorry, something unexpected happened. Please try again.');
+            $this->dispatch('notification.created', message: 'Desculpe, algo inesperado aconteceu. Por favor, tente novamente.');
             $this->redirectRoute('profile.show', ['username' => $user->username], navigate: true);
 
             return;
         }
 
         if ($question->answer_created_at !== null && $question->answer_created_at->diffInHours(now()) > 24) {
-            $this->dispatch('notification.created', message: 'Answer cannot be edited after 24 hours.');
+            $this->dispatch('notification.created', message: 'A resposta não pode ser editada após 24 horas.');
 
             return;
         }
@@ -83,7 +83,7 @@ final class Edit extends Component
             $this->dispatch('close-modal', "question.edit.answer.{$question->id}");
         }
 
-        $this->dispatch('notification.created', message: $originalAnswer === null ? 'Question answered.' : ($question->isSharedUpdate() ? 'Post updated.' : 'Answer updated.'));
+        $this->dispatch('notification.created', message: $originalAnswer === null ? 'Pergunta respondida.' : ($question->isSharedUpdate() ? 'Post updated.' : 'Answer updated.'));
         $this->dispatch('question.updated');
     }
 
@@ -100,7 +100,7 @@ final class Edit extends Component
             'is_reported' => true,
         ]);
 
-        $this->dispatch('notification.created', message: 'Question reported.');
+        $this->dispatch('notification.created', message: 'Pergunta reportada.');
         $this->dispatch('question.reported');
     }
 
@@ -109,7 +109,7 @@ final class Edit extends Component
      */
     public function ignore(): void
     {
-        $this->dispatch('notification.created', message: 'Question ignored.');
+        $this->dispatch('notification.created', message: 'Pergunta ignorada.');
 
         $this->dispatch('question.ignore', questionId: $this->questionId);
     }

@@ -14,7 +14,7 @@ test('pre selects user link shape and gradient', function () {
     $component = Livewire::actingAs($user)->test(Edit::class);
 
     $component->assertSet('link_shape', 'rounded-lg');
-    $component->assertSet('gradient', 'from-blue-500 to-purple-600');
+    $component->assertSet('gradient', 'from-blue-500 to-orange-600');
 
     $user = User::factory()->create([
         'settings' => [

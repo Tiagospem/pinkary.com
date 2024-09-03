@@ -9,7 +9,6 @@ use App\Http\Controllers\QrCodeController;
 use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\UserAvatarController;
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\UserGitHubUsernameController;
 use App\Http\Controllers\UserIsVerifiedController;
 use App\Http\Controllers\UserTimezoneController;
 use App\Http\Middleware\EnsureVerifiedEmailsForSignInUsers;
@@ -25,9 +24,6 @@ Route::view('/users', 'home/users')->name('home.users');
 Route::view('/terms', 'terms')->name('terms');
 Route::view('/privacy', 'privacy')->name('privacy');
 Route::view('/support', 'support')->name('support');
-Route::view('/brand/resources', 'brand.resources')->name('brand.resources');
-
-Route::redirect('/sponsors', 'https://github.com/sponsors/nunomaduro/')->name('sponsors');
 
 Route::get('/changelog', [ChangelogController::class, 'show'])->name('changelog');
 Route::post('/profile/timezone', [UserTimezoneController::class, 'update'])->name('profile.timezone.update');
@@ -61,19 +57,6 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [UserController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [UserController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [UserController::class, 'destroy'])->name('profile.destroy');
-
-    Route::prefix('/profile/connect/github')->group(function () {
-        Route::get('/', [UserGitHubUsernameController::class, 'index'])
-            ->name('profile.connect.github');
-
-        Route::get('/update', [
-            UserGitHubUsernameController::class, 'update',
-        ])->name('profile.connect.github.update');
-
-        Route::delete('/', [
-            UserGitHubUsernameController::class, 'destroy',
-        ])->name('profile.connect.github.destroy');
-    });
 
     Route::post('/profile/verified', [UserIsVerifiedController::class, 'update'])
         ->name('profile.verified.update');

@@ -6,103 +6,101 @@
             wire:navigate
         >
             <x-icons.chevron-left class="size-4" />
-            <span>Back</span>
+            <span>Voltar</span>
         </a>
 
         <div class="mt-6">
             <div class="prose prose-slate prose-invert mx-auto max-w-4xl">
-                <h1>Privacy Policy</h1>
-                <p><strong>Last Updated: 19 Feb 2024</strong></p>
+                <h1>Política de Privacidade</h1>
+                <p><strong>Última Atualização: 19 de fevereiro de 2024</strong></p>
 
                 <p>
-                    Welcome to Pinkary ("we," "us," "our"). We are committed to protecting your personal information and your right to privacy. If you
-                    have any questions or concerns about this privacy notice, or our practices with regards to your personal information, please
-                    contact us at team
-                    @pinkary.com.
+                    Bem-vindo ao Toplance. Estamos comprometidos em proteger suas informações pessoais e seu direito à privacidade.
+                    Se você tiver alguma dúvida ou preocupação sobre este aviso de privacidade, ou nossas práticas em relação às suas informações pessoais,
+                    entre em contato conosco pelo e-mail contato@leilotech.com.br.
                 </p>
 
-                <h2>1. Information We Collect</h2>
+                <h2>1. Informações que Coletamos</h2>
                 <p>
-                    We may collect personal information that you voluntarily provide to us when you register on the Services, express an interest in
-                    obtaining information about us or our products and services, participate in activities on the Services, or otherwise when you
-                    contact us.
+                    Podemos coletar informações pessoais que você nos fornece voluntariamente ao se registrar nos Serviços, demonstrar interesse em obter informações
+                    sobre nossos produtos e serviços, participar de atividades nos Serviços ou, de outra forma, quando você entra em contato conosco.
                 </p>
                 <p>
-                    The personal information that we collect depends on the context of your interactions with us and the Services, the choices you
-                    make, and the products and features you use. The personal information we collect may include the following:
+                    As informações pessoais que coletamos dependem do contexto de suas interações conosco e com os Serviços, das escolhas que você faz e dos produtos e
+                    recursos que utiliza. As informações pessoais que coletamos podem incluir o seguinte:
                 </p>
                 <ul>
-                    <li>Name</li>
-                    <li>Email address</li>
-                    <li>Account passwords</li>
-                    <li>Social media account information</li>
-                    <li>Payment information</li>
-                    <li>Other personal information you choose to provide</li>
+                    <li>Nome</li>
+                    <li>Endereço de e-mail</li>
+                    <li>Senhas de contas</li>
+                    <li>Informações de contas de redes sociais</li>
+                    <li>Informações de pagamento</li>
+                    <li>Outras informações pessoais que você escolher fornecer</li>
                 </ul>
                 <p>
-                    However, we may also collect additional information when delivering our Services to you to ensure necessary and optimal
-                    performance. These methods of collection may not be as obvious to you, so we wanted to highlight and explain them below:
+                    Além disso, podemos coletar informações adicionais ao fornecer nossos Serviços a você para garantir o desempenho necessário e otimizado. Esses métodos de
+                    coleta podem não ser tão óbvios para você, então gostaríamos de destacá-los e explicá-los abaixo:
                 </p>
                 <ul>
-                    <li>Log and Usage Data</li>
-                    <li>Location Information</li>
+                    <li>Dados de Uso e Registro</li>
+                    <li>Informações de Localização</li>
                 </ul>
 
-                <h2>2. How We Use Your Information</h2>
-                <p>We use personal information collected via our Services for a variety of business purposes described below:</p>
+                <h2>2. Como Usamos Suas Informações</h2>
+                <p>Usamos as informações pessoais coletadas por meio de nossos Serviços para diversos fins comerciais descritos abaixo:</p>
                 <ul>
-                    <li>To facilitate account creation and the login process.</li>
-                    <li>To manage user accounts.</li>
-                    <li>To send administrative information to you.</li>
-                    <li>To fulfill and manage your orders.</li>
-                    <li>To respond to user inquiries and offer support to users.</li>
-                    <li>To comply with our legal obligations.</li>
-                    <li>To respond to legal requests and prevent harm.</li>
+                    <li>Para facilitar a criação de conta e o processo de login.</li>
+                    <li>Para gerenciar contas de usuários.</li>
+                    <li>Para enviar informações administrativas para você.</li>
+                    <li>Para atender e gerenciar seus pedidos.</li>
+                    <li>Para responder a consultas de usuários e oferecer suporte.</li>
+                    <li>Para cumprir nossas obrigações legais.</li>
+                    <li>Para responder a solicitações legais e prevenir danos.</li>
                     <li>
-                        For other business purposes such as data analysis, identifying usage trends, determining the effectiveness of our promotional
-                        campaigns, and to evaluate and improve our Services, products, marketing, and your experience.
+                        Para outros fins comerciais, como análise de dados, identificação de tendências de uso, determinar a eficácia de nossas campanhas promocionais
+                        e para avaliar e melhorar nossos Serviços, produtos, marketing e sua experiência.
                     </li>
                 </ul>
 
-                <h2>3. Sharing Your Information</h2>
-                <p>We may share or transfer your information in the following situations:</p>
+                <h2>3. Compartilhamento de Suas Informações</h2>
+                <p>Podemos compartilhar ou transferir suas informações nas seguintes situações:</p>
                 <ul>
                     <li>
-                        With service providers: We may share your information with third-party service providers, contractors, or agents who perform
-                        services for us or on our behalf and require access to such information to do that work.
+                        Com prestadores de serviços: Podemos compartilhar suas informações com prestadores de serviços terceirizados, contratados ou agentes que
+                        realizam serviços para nós ou em nosso nome e precisam de acesso a essas informações para realizar o trabalho.
                     </li>
                     <li>
-                        For business transfers: We may share or transfer your information in connection with, or during negotiations of, any merger,
-                        sale of company assets, financing, or acquisition of all or a portion of our business to another company.
+                        Para transferências comerciais: Podemos compartilhar ou transferir suas informações em conexão com, ou durante negociações de, qualquer fusão,
+                        venda de ativos da empresa, financiamento ou aquisição de toda ou parte de nossos negócios por outra empresa.
                     </li>
-                    <li>With your consent: We may disclose your personal information for any other purpose with your consent.</li>
+                    <li>Com seu consentimento: Podemos divulgar suas informações pessoais para qualquer outro propósito com seu consentimento.</li>
                 </ul>
 
-                <h2>4. Data Retention</h2>
+                <h2>4. Retenção de Dados</h2>
                 <p>
-                    We will retain your personal information only for as long as is necessary for the purposes set out in this Privacy Policy, unless
-                    a longer retention period is required or permitted by law (such as tax, accounting, or other legal requirements).
+                    Reteremos suas informações pessoais apenas pelo tempo necessário para os fins estabelecidos nesta Política de Privacidade, a menos que
+                    um período de retenção mais longo seja exigido ou permitido por lei (como requisitos fiscais, contábeis ou outras exigências legais).
                 </p>
 
-                <h2>5. Data Protection Rights</h2>
+                <h2>5. Direitos de Proteção de Dados</h2>
                 <p>
-                    Under the General Data Protection Regulation (GDPR), you have certain rights regarding your personal information. These include
-                    the right to request access, correction, deletion, or restriction of your personal information, and the right to data portability.
-                    If you wish to exercise any of these rights, please contact us.
+                    De acordo com o Regulamento Geral de Proteção de Dados (GDPR), você tem certos direitos em relação às suas informações pessoais.
+                    Isso inclui o direito de solicitar acesso, correção, exclusão ou restrição de suas informações pessoais, bem como o direito à portabilidade dos dados.
+                    Se desejar exercer algum desses direitos, entre em contato conosco.
                 </p>
 
-                <h2>6. Changes to This Privacy Policy</h2>
+                <h2>6. Alterações a Esta Política de Privacidade</h2>
                 <p>
-                    We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this
-                    page and updating the "Last Updated" date.
+                    Podemos atualizar nossa Política de Privacidade de tempos em tempos. Notificaremos você sobre quaisquer alterações publicando a nova
+                    Política de Privacidade nesta página e atualizando a data de "Última Atualização".
                 </p>
 
-                <h2>7. Contact Us</h2>
+                <h2>7. Entre em Contato Conosco</h2>
                 <p>
-                    If you have questions or comments about this policy, you may email us at
-                    <a href="mailto:team@pinkary.com">team@pinkary.com</a>
-                    .
+                    Se você tiver perguntas ou comentários sobre esta política, pode nos enviar um e-mail para
+                    <a href="mailto:team@Toplance.com">contato@leilotech.com.br</a>.
                 </p>
+
             </div>
         </div>
     </div>

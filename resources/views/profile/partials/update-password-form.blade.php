@@ -1,11 +1,11 @@
 <section>
     <header>
         <h2 class="text-lg font-medium text-slate-400">
-            {{ __('Update Password') }}
+            {{ __('Alterar senha') }}
         </h2>
 
         <p class="mt-1 text-sm text-slate-500">
-            {{ __('Ensure your account is using a long, random password to stay secure.') }}
+            {{ __('Certifique-se de que sua conta esteja usando uma senha longa e aleatória para manter a segurança.') }}
         </p>
     </header>
 
@@ -20,7 +20,7 @@
         <div>
             <x-input-label
                 for="update_password_current_password"
-                :value="__('Current Password')"
+                :value="__('Senha atual')"
             />
             <x-text-input
                 id="update_password_current_password"
@@ -38,7 +38,7 @@
         <div>
             <x-input-label
                 for="update_password_password"
-                :value="__('New Password')"
+                :value="__('Nova senha')"
             />
             <x-text-input
                 id="update_password_password"
@@ -56,7 +56,7 @@
         <div>
             <x-input-label
                 for="update_password_password_confirmation"
-                :value="__('Confirm Password')"
+                :value="__('Confirme a senha')"
             />
             <x-text-input
                 id="update_password_password_confirmation"
@@ -72,7 +72,7 @@
         </div>
 
         <div class="flex items-center gap-4">
-            <x-primary-button>{{ __('Save') }}</x-primary-button>
+            <x-primary-button>{{ __('Salvar') }}</x-primary-button>
         </div>
     </form>
 </section>

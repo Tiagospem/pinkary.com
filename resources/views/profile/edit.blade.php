@@ -8,7 +8,7 @@
                     wire:navigate
                 >
                     <x-icons.chevron-left class="size-5" />
-                    <span>Back</span>
+                    <span>Voltar</span>
                 </a>
             </div>
 

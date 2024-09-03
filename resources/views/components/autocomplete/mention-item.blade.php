@@ -21,12 +21,12 @@
 
                 @if ($result->payload['isCompanyVerified'])
                     <x-icons.verified-company
-                        color="pink-500"
+                        color="orange-500"
                         class="ml-1 h-3.5 w-3.5"
                     />
                 @elseif ($result->payload['isVerified'])
                     <x-icons.verified
-                        color="pink-500"
+                        color="orange-500"
                         class="ml-1 h-3.5 w-3.5"
                     />
                 @endif

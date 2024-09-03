@@ -32,7 +32,7 @@ test('refreshes when link settings changes', function () {
     $user->update([
         'settings' => [
             'link_shape' => 'rounded-lg',
-            'gradient' => 'from-red-500 to-purple-600',
+            'gradient' => 'from-red-500 to-orange-600',
         ],
     ]);
 

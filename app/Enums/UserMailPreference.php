@@ -18,9 +18,9 @@ enum UserMailPreference: string
     public static function toArray(): array
     {
         return [
-            self::Daily->value => 'Daily',
-            self::Weekly->value => 'Weekly',
-            self::Never->value => 'Never',
+            self::Daily->value => 'Diariamente',
+            self::Weekly->value => 'Semanalmente',
+            self::Never->value => 'Nunca',
         ];
     }
 }
