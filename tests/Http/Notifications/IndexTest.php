@@ -43,6 +43,6 @@ test('auth', function () {
         ->assertStatus(200);
 
     $response->assertOk()
-        ->assertSee('Notifications')
+        ->assertSee('Notificações')
         ->assertSeeLivewire(Index::class);
 });

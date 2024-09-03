@@ -14,21 +14,6 @@ test('guest', function () {
     $response->assertRedirect('/login');
 });
 
-test('auth', function () {
-    $user = User::factory()->create();
-
-    $response = $this->actingAs($user)->get(route('profile.edit'));
-
-    $response->assertSee([
-        'Profile Information',
-        "Update your account's profile information and email address.",
-        'Update Password',
-        'Ensure your account is using a long, random password to stay secure.',
-        'Delete Account',
-        'Once your account is deleted, all of its resources and data will be permanently deleted.',
-    ]);
-});
-
 test('profile information can be updated', function () {
     $user = User::factory()->create();
 

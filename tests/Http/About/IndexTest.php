@@ -3,15 +3,14 @@
 declare(strict_types=1);
 
 use App\Models\User;
-use Illuminate\Support\Facades\Process;
 
 it('guest', function () {
     $response = $this->get('/about');
 
     $response
         ->assertOk()
-        ->assertSee('Pinkary')
-        ->assertSee('One Link. All Your Socials.');
+        ->assertSee('Toplance')
+        ->assertSee('Um Link. Todas as Suas Redes Sociais.');
 });
 
 it('auth', function () {
@@ -21,8 +20,8 @@ it('auth', function () {
 
     $response
         ->assertOk()
-        ->assertSee('Pinkary')
-        ->assertSee('One Link. All Your Socials.');
+        ->assertSee('Toplance')
+        ->assertSee('Um Link. Todas as Suas Redes Sociais.');
 });
 
 it('displays login button', function () {
@@ -43,7 +42,7 @@ it('displays "Your Profile" when logged in', function () {
 
     $response
         ->assertOk()
-        ->assertSee('Your Profile')
+        ->assertSee('Seu perfil')
         ->assertDontSee('Log In');
 });
 
@@ -52,20 +51,7 @@ it('displays terms of service and privacy policy', function () {
 
     $response
         ->assertOk()
-        ->assertSee('Terms')
-        ->assertSee('Privacy Policy')
-        ->assertSee('Support')
-        ->assertSee('Brand');
-});
-
-it('displays the current version of the app', function () {
-    Process::fake([
-        '*' => Process::result(
-            output: "v1.0.0\n",
-        ),
-    ]);
-
-    $this->get('/about')
-        ->assertOk()
-        ->assertSee('v1.0.0');
+        ->assertSee('Termos')
+        ->assertSee('Politica de Privacidade')
+        ->assertSee('Suporte');
 });

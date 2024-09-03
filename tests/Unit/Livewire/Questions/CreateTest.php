@@ -17,7 +17,7 @@ test('render', function () {
         'toId' => $userB->id,
     ]);
 
-    $component->assertOk()->assertSee('Ask a question...');
+    $component->assertOk()->assertSeeHtml('Faça uma pergunta...');
 });
 
 test('refreshes when link settings changes', function () {
@@ -117,14 +117,14 @@ test('store rate limit', function () {
     $component->call('store');
 
     $component->assertHasErrors([
-        'content' => 'You can only send 3 questions per minute.',
+        'content' => 'Você só pode enviar 3 perguntas por minuto.',
     ]);
 
     $component->set('content', 'Hello World');
     $component->call('store');
 
     $component->assertHasErrors([
-        'content' => 'You can only send 3 questions per minute.',
+        'content' => 'Você só pode enviar 3 perguntas por minuto.',
     ]);
 });
 
@@ -177,7 +177,7 @@ test('max 30 questions per day', function () {
     $component->call('store');
 
     $component->assertHasErrors([
-        'content' => 'You can only send 30 questions per day.',
+        'content' => 'Você só pode enviar 30 perguntas por dia.',
     ]);
 });
 
@@ -298,7 +298,7 @@ test('show "Share an update..." if user is viewing his own profile', function ()
         'toId' => $user->id,
     ]);
 
-    $component->assertSee('Share an update...');
+    $component->assertSeeHtml('Compartilhe uma atualização...');
 
     $user2 = User::factory()->create();
 
@@ -306,7 +306,7 @@ test('show "Share an update..." if user is viewing his own profile', function ()
         'toId' => $user2->id,
     ]);
 
-    $component->assertSee('Ask a question...');
+    $component->assertSeeHtml('Faça uma pergunta...');
 });
 
 test('user don\'t see the anonymous checkbox if the user is viewing his own profile', function () {
@@ -536,7 +536,7 @@ test('upload must be an image', function () {
     $component->call('runImageValidation');
 
     $component->assertHasErrors([
-        'images.0' => 'The file must be an image.',
+        'images.0' => 'O arquivo deve ser uma imagem.',
     ]);
 });
 
@@ -573,7 +573,7 @@ test('upload must be correct type of image', function () {
     $component->call('runImageValidation');
 
     expect($component->errors()->get('images.0'))->toBeArray()
-        ->and($component->errors()->get('images.0'))->toContain('The image must be a file of type: jpeg, png, gif, webp, jpg.');
+        ->and($component->errors()->get('images.0'))->toContain('A imagem deve ser um arquivo do tipo: jpeg, png, gif, webp, jpg.');
 });
 
 test('max file size error', function () {
@@ -598,7 +598,7 @@ test('max file size error', function () {
         ->not()->toContain($largeFile);
 
     $component->assertHasErrors([
-        'images.0' => "The image may not be greater than {$maxFileSize} kilobytes.",
+        'images.0' => "A imagem não pode ter mais de {$maxFileSize} kilobytes.",
     ]);
 });
 
@@ -617,7 +617,7 @@ test('max size & ratio validation', function () {
     $component->call('runImageValidation');
 
     $component->assertHasErrors([
-        'images.0' => 'The image must be less than 4000 x 4000 pixels.',
+        'images.0' => 'A imagem deve ter no máximo 4000 x 4000 pixels.',
     ]);
 
     $component->set('images', [
@@ -626,6 +626,6 @@ test('max size & ratio validation', function () {
     $component->call('runImageValidation');
 
     $component->assertHasErrors([
-        'images.0' => 'The image aspect ratio must be less than 2/5.',
+        'images.0' => 'A proporção da imagem deve ser menor que 2/5.',
     ]);
 });

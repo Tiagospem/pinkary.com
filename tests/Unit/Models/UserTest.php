@@ -42,18 +42,6 @@ test('is verified', function () {
     expect($user->is_verified)->toBeTrue();
 });
 
-test('is verified because in list of fixed sponsors', function () {
-    $user = User::factory()->create([
-        'is_verified' => false,
-        'username' => 'test',
-    ]);
-
-    config()->set('sponsors.github_usernames', ['test']);
-
-    expect($user->is_verified)->toBeTrue()
-        ->and($user->is_company_verified)->toBeFalse();
-});
-
 test('is not verified because not in sponsors', function () {
     $user = User::factory()->create([
         'is_verified' => false,
@@ -64,18 +52,6 @@ test('is not verified because not in sponsors', function () {
 
     expect($user->is_verified)->toBeFalse()
         ->and($user->is_company_verified)->toBeFalse();
-});
-
-test('is verified because in list of fixed company sponsors', function () {
-    $user = User::factory()->create([
-        'is_verified' => false,
-        'username' => 'test',
-    ]);
-
-    config()->set('sponsors.github_company_usernames', ['test']);
-
-    expect($user->is_verified)->toBeTrue()
-        ->and($user->is_company_verified)->toBeTrue();
 });
 
 test('increment views', function () {

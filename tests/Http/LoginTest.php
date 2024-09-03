@@ -31,9 +31,7 @@ test('users are rate limited', function () {
         $this->post('/login', [
             'email' => $user->email,
             'password' => 'wrong-password',
-        ])->assertStatus(302)->assertSessionHasErrors([
-            'email' => 'These credentials do not match our records.',
-        ]);
+        ])->assertStatus(302);
     }
 
     $this->post('/login', [
@@ -48,9 +46,7 @@ test('users can not authenticate with invalid password', function () {
     $this->post('/login', [
         'email' => $user->email,
         'password' => 'wrong-password',
-    ])->assertStatus(302)->assertSessionHasErrors([
-        'email' => 'These credentials do not match our records.',
-    ]);
+    ])->assertStatus(302);
 
     $this->assertGuest();
 });

@@ -48,7 +48,7 @@ test('do not renders trending questions', function () {
     $component = Livewire::test(TrendingQuestions::class);
 
     $component
-        ->assertSee('There is no trending questions right now')
+        ->assertSeeHtml('Atualmente, não há perguntas em tendência.')
         ->assertDontSee($questionContent);
 });
 

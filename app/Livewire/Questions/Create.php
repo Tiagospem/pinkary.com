@@ -154,7 +154,7 @@ final class Create extends Component
     public function placeholder(): string
     {
         return match (true) {
-            filled($this->parentId) => 'Escreva um comnetário',
+            filled($this->parentId) => 'Escreva um comentário',
             $this->isSharingUpdate() => 'Compartilhe uma atualização...',
             default => 'Faça uma pergunta...'
         };

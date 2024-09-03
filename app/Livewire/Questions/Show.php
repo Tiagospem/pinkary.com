@@ -96,7 +96,7 @@ final class Show extends Component
         }
 
         if ($this->inIndex) {
-            $this->dispatch('notification.created', message: 'Question ignored.');
+            $this->dispatch('notification.created', message: 'Pergunta ignorada.');
 
             $this->dispatch('question.ignore', questionId: $this->questionId);
 
@@ -212,7 +212,7 @@ final class Show extends Component
             $this->authorize('delete', $bookmark);
 
             if ($bookmark->delete()) {
-                $this->dispatch('notification.created', message: 'Bookmark removed.');
+                $this->dispatch('notification.created', message: 'Marcador removido.');
             }
         }
 

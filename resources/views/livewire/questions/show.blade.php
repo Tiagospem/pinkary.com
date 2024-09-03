@@ -116,7 +116,7 @@
                                     class="flex items-center gap-1.5"
                                 >
                                     <x-heroicon-m-pencil class="h-4 w-4"/>
-                                    <span>Edit</span>
+                                    <span>Editar</span>
                                 </x-dropdown-button>
                             @endif
                             @if (! $question->is_ignored && auth()->user()->can('ignore', $question))
@@ -365,7 +365,7 @@
                 name="question.edit.answer.{{ $questionId }}"
             >
                 <div class="p-8">
-                    <h2 class="text-lg font-medium text-slate-50">Edit Answer</h2>
+                    <h2 class="text-lg font-medium text-slate-50">Editar resposta.</h2>
                     <livewire:questions.edit
                         :questionId="$question->id"
                         :key="'edit-answer-'.$question->id"

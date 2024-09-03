@@ -15,7 +15,7 @@ test('renders questions with answers', function () {
     $component = Livewire::test(Feed::class);
 
     $component->assertSee('This is the answer')
-        ->assertDontSee('There are no questions to show.');
+        ->assertDontSee('Não há perguntas para exibir.');
 });
 
 test('do not renders questions without answers', function () {
@@ -27,7 +27,7 @@ test('do not renders questions without answers', function () {
 
     $component = Livewire::actingAs($user)->test(Feed::class);
 
-    $component->assertSee('There are no questions to show.');
+    $component->assertSee('Não há perguntas para exibir.');
 });
 
 test('do not renders ignored questions', function () {
@@ -38,7 +38,7 @@ test('do not renders ignored questions', function () {
 
     $component = Livewire::test(Feed::class);
 
-    $component->assertSee('There are no questions to show.');
+    $component->assertSee('Não há perguntas para exibir.');
 });
 
 test('ignore', function () {
@@ -122,11 +122,11 @@ test('refresh', function () {
         'answer' => 'This is the answer',
     ]);
 
-    $component->assertSee('There are no questions to show.')
+    $component->assertSee('Não há perguntas para exibir.')
         ->assertDontSee('This is the answer');
 
     $component->dispatch('question.created');
 
     $component->assertSee('This is the answer')
-        ->assertDontSee('There are no questions to show.');
+        ->assertDontSee('Não há perguntas para exibir.');
 });

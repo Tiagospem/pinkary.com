@@ -11,7 +11,7 @@
         />
 
         <div class="mt-6 flex justify-end gap-4">
-            <x-secondary-button x-on:click="$dispatch('close')">Close</x-secondary-button>
+            <x-secondary-button x-on:click="$dispatch('close')">Fechar</x-secondary-button>
             <x-primary-button
                 as="a"
                 x-on:click="$dispatch('close')"

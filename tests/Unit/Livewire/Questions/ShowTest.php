@@ -100,7 +100,7 @@ test('ignore', function () {
     ]);
 
     $component->call('ignore');
-    $component->assertDispatched('notification.created', message: 'Question ignored.');
+    $component->assertDispatched('notification.created', message: 'Pergunta ignorada.');
     $component->assertDispatched('question.ignore');
 });
 
@@ -126,7 +126,7 @@ test('bookmark', function () {
     ]);
 
     $component->call('bookmark');
-    $component->assertDispatched('notification.created', message: 'Bookmark added.');
+    $component->assertDispatched('notification.created', message: 'Marcador adicionado.');
 
     $component->call('bookmark');
 
@@ -161,7 +161,7 @@ test('unbookmark', function () {
     $component->call('unbookmark');
 
     $component->assertDispatched('question.unbookmarked');
-    $component->assertDispatched('notification.created', message: 'Bookmark removed.');
+    $component->assertDispatched('notification.created', message: 'Marcador removido.');
     expect($question->bookmarks()->count())->toBe(0);
 });
 

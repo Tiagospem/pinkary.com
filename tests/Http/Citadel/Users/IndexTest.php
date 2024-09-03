@@ -11,9 +11,9 @@ test('auth', function () {
     $response->assertStatus(302)->assertRedirect(route('login'));
 });
 
-it('is only accessible to nuno', function () {
+it('is only accessible to tiago', function () {
     $user = User::factory()->create([
-        'email' => 'enunomaduro@gmail.com',
+        'email' => 'tiagospem@gmail.com',
     ]);
 
     $response = $this->actingAs($user)->get(UserResource::getUrl('index', isAbsolute: false));

@@ -22,7 +22,7 @@ test('render', function () {
         'questionId' => $this->question->id,
     ]);
 
-    $component->assertSee('Write your answer...');
+    $component->assertSee('Digite algo...');
 });
 
 test('update', function () {
@@ -84,7 +84,7 @@ test('ignore', function () {
 
     $component->call('ignore');
 
-    $component->assertDispatched('notification.created', message: 'Question ignored.');
+    $component->assertDispatched('notification.created', message: 'Pergunta ignorada.');
     $component->assertDispatched('question.ignore', questionId: $this->question->id);
 });
 
@@ -115,7 +115,7 @@ test('can edit a question that has an answer', function () {
     ])
         ->set('answer', 'Hello World')
         ->call('update')
-        ->assertDispatched('notification.created', message: 'Answer updated.')
+        ->assertDispatched('notification.created', message: 'Resposta atualizada.')
         ->assertDispatched('close-modal', "question.edit.answer.{$this->question->id}")
         ->assertDispatched('question.updated');
 
@@ -126,7 +126,7 @@ test('can edit a question that has an answer', function () {
         'questionId' => $this->question->id,
     ])
         ->assertSee('Hello World')
-        ->assertSee('Edited');
+        ->assertSee('Editado');
 });
 
 test('edited questions display raw answers in the form', function () {
@@ -174,7 +174,7 @@ test('cannot edit an answer after 24 hours', function () {
     ])
         ->set('answer', 'Hello World')
         ->call('update')
-        ->assertDispatched('notification.created', message: 'Answer cannot be edited after 24 hours.');
+        ->assertDispatched('notification.created', message: 'A resposta não pode ser editada após 24 horas.');
 });
 
 test('cannot answer a question that has been reported or ignored', function () {
@@ -190,7 +190,7 @@ test('cannot answer a question that has been reported or ignored', function () {
 
     $component->call('update');
 
-    $component->assertDispatched('notification.created', message: 'Sorry, something unexpected happened. Please try again.');
+    $component->assertDispatched('notification.created', message: 'Desculpe, algo inesperado aconteceu. Por favor, tente novamente.');
 
     $this->question->update([
         'is_reported' => false,
@@ -199,7 +199,7 @@ test('cannot answer a question that has been reported or ignored', function () {
 
     $component->call('update');
 
-    $component->assertDispatched('notification.created', message: 'Sorry, something unexpected happened. Please try again.');
+    $component->assertDispatched('notification.created', message: 'Desculpe, algo inesperado aconteceu. Por favor, tente novamente.');
 
     $component->assertRedirect(route('profile.show', ['username' => $this->question->to->username]));
 });

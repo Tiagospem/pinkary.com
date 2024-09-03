@@ -48,7 +48,7 @@ test('do not renders questions without likes of authenticated user', function ()
     $component = Livewire::actingAs($user)->test(QuestionsForYou::class);
 
     $component
-        ->assertSee('found any questions that may interest you based on the activity')
+        ->assertSee('encontramos nenhuma pergunta que possa lhe interessar com base na atividade')
         ->assertDontSee($questionContent);
 });
 

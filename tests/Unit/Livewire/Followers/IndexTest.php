@@ -35,7 +35,7 @@ test('render with followers', function () {
     });
 });
 
-test('render with follows you badge', function () {
+test('render with follows you badge y', function () {
     $user = User::factory()->create();
     $viewer = User::factory()->create();
     $followers = User::factory(10)->create();
@@ -60,11 +60,11 @@ test('render with follows you badge', function () {
     $orderedFollowers->each(function (User $user) use (&$orderedText, $following): void {
         $orderedText[] = $user->username;
         if ($following->contains($user)) {
-            $orderedText[] = 'Follows you';
+            $orderedText[] = 'Segue você';
         }
     });
 
-    $component->assertSeeInOrder($orderedText);
+    $component->assertSeeHtmlInOrder($orderedText);
 });
 
 test('do not see follows you badge if user is view his profile', function () {

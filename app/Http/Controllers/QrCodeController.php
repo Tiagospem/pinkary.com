@@ -26,8 +26,8 @@ final readonly class QrCodeController
             ->size(512)
             ->format('png')
             ->backgroundColor(3, 7, 18, 100)
-            ->color(236, 72, 153, 100)
-            ->merge('/public/img/ico.png')
+            ->color(255, 165, 0, 100)
+            ->merge('/public/apple-touch-icon.png')
             ->errorCorrection('M')
             ->generate(route('profile.show', [
                 'username' => $user->username,
@@ -38,7 +38,7 @@ final readonly class QrCodeController
                 /** @var string $qrCode */
                 echo $qrCode;
             },
-            'pinkary_'.$user->username.'.png',
+            'toplance_'.$user->username.'.png',
             ['Content-Type' => 'image/png']
         );
     }

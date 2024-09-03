@@ -20,7 +20,7 @@ it('guest can see the "for you" view', function () {
     $response = $this->get(route('home.for_you'));
 
     $response->assertOk()
-        ->assertSee('Log in or sign up to access personalized content');
+        ->assertSee('Faça login ou crie uma conta para acessar conteúdo personalizado.');
 });
 
 it('does increment views', function () {

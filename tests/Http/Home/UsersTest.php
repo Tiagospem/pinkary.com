@@ -8,6 +8,6 @@ it('can see the "users" view', function () {
     $response = $this->get(route('home.users'));
 
     $response->assertOk()
-        ->assertSee('Search')
+        ->assertSee('Procure usuários...')
         ->assertSeeLivewire(Users::class);
 });
