@@ -13,7 +13,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::drop('questions');
+        Schema::disableForeignKeyConstraints();
+
+        Schema::dropIfExists('questions');
+
+        Schema::enableForeignKeyConstraints();
 
         Schema::create('questions', function (Blueprint $table): void {
             $table->uuid('id')->primary();
