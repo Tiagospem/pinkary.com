@@ -82,6 +82,7 @@ final class Users extends Component
             ->whereHas('links', function (Builder $query): void {
                 $query->where('url', 'like', '%twitter.com%')
                     ->orWhere('url', 'like', '%github.com%')
+                    ->orWhere('url', 'like', '%instagram.com%')
                     ->orWhere('url', 'like', '://x.com%');
             })
             ->whereNotIn('id', $except->pluck('id'))
@@ -110,15 +111,10 @@ final class Users extends Component
             ->whereHas('links', function (Builder $query): void {
                 $query->where('url', 'like', '%twitter.com%')
                     ->orWhere('url', 'like', '%github.com%')
+                    ->orWhere('url', 'like', '%instagram.com%')
                     ->orWhere('url', 'like', '%://x.com%');
             })
-            ->where(function (Builder $query): void {
-                $query->where('is_verified', true)
-                    ->orWhereIn('username', array_merge(
-                        config()->array('sponsors.github_company_usernames', []),
-                        config()->array('sponsors.github_usernames', [])
-                    ));
-            })
+            ->where('is_verified', true)
             ->limit($limit)
             ->inRandomOrder()
             ->get();

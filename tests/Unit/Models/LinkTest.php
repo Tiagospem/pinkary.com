@@ -13,10 +13,10 @@ test('to array', function () {
         'description',
         'url',
         'user_id',
-        'created_at',
-        'updated_at',
         'click_count',
         'is_visible',
+        'created_at',
+        'updated_at',
     ]);
 });
 

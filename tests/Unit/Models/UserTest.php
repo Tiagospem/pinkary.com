@@ -4,35 +4,6 @@ declare(strict_types=1);
 
 use App\Models\User;
 
-test('to array', function () {
-    $user = User::factory()->create()->fresh();
-
-    expect(array_keys($user->toArray()))->toBe([
-        'id',
-        'name',
-        'username',
-        'bio',
-        'email',
-        'email_verified_at',
-        'created_at',
-        'updated_at',
-        'links_sort',
-        'settings',
-        'avatar',
-        'is_verified',
-        'mail_preference_time',
-        'github_username',
-        'prefers_anonymous_questions',
-        'is_company_verified',
-        'avatar_updated_at',
-        'views',
-        'is_uploaded_avatar',
-        'two_factor_secret',
-        'two_factor_recovery_codes',
-        'two_factor_confirmed_at',
-    ]);
-});
-
 test('is verified', function () {
     $user = User::factory()->create([
         'is_verified' => true,

@@ -46,7 +46,7 @@ it('allows user to update link settings', function () {
     $user->refresh();
 
     expect($user->settings)->toBe([
-        'link_shape' => 'rounded-none',
         'gradient' => 'from-red-500 to-orange-600',
+        'link_shape' => 'rounded-none',
     ]);
 });

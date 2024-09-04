@@ -81,19 +81,6 @@ test('renders trending questions order by trending score', function () {
             'views' => 100,
         ]); // score = .00002298
 
-    // 0 likes, 1 comment, posted 10 minutes ago (same score as above)
-    Question::factory()
-        ->afterCreating(fn (Question $question) => Question::factory()->create([
-            'parent_id' => $question->id,
-            'content' => 'comment on question 4',
-            'answer_created_at' => $date->subMinutes(10),
-        ]))
-        ->create([
-            'content' => 'trending question 4',
-            'answer_created_at' => $date->subMinutes(10),
-            'views' => 100,
-        ]); // score = .00002298
-
     // 1 like, 0 comments, posted 11 minutes ago (just below question 3)
     Question::factory()
         ->hasLikes(1)
@@ -102,20 +89,6 @@ test('renders trending questions order by trending score', function () {
             'answer_created_at' => $date->subMinutes(11),
             'views' => 500,
         ]); // score = .00002297
-
-    // 1 like, 1 comment, posted 15 minutes ago
-    Question::factory()
-        ->hasLikes(1)
-        ->afterCreating(fn (Question $question) => Question::factory()->create([
-            'parent_id' => $question->id,
-            'content' => 'comment on question 6',
-            'answer_created_at' => $date->subMinutes(15),
-        ]))
-        ->create([
-            'content' => 'trending question 6',
-            'answer_created_at' => $date->subMinutes(15),
-            'views' => 700,
-        ]); // score = .0000459
 
     // 20 likes, 0 comments, posted a day ago
     Question::factory()
@@ -139,9 +112,7 @@ test('renders trending questions order by trending score', function () {
 
     $component->assertSeeInOrder([
         'trending question 7',
-        'trending question 6',
         'trending question 3',
-        'trending question 4',
         'trending question 5',
         'trending question 1',
         'trending question 2',

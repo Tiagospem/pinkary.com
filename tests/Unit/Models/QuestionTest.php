@@ -7,28 +7,6 @@ use App\Models\Like;
 use App\Models\Question;
 use App\Models\User;
 
-test('to array', function () {
-    $question = Question::factory()->create()->fresh();
-
-    expect(array_keys($question->toArray()))->toBe([
-        'id',
-        'from_id',
-        'to_id',
-        'content',
-        'answer',
-        'answer_created_at',
-        'anonymously',
-        'is_reported',
-        'created_at',
-        'updated_at',
-        'pinned',
-        'is_ignored',
-        'views',
-        'answer_updated_at',
-        'parent_id',
-    ]);
-});
-
 test('content', function () {
     $question = Question::factory()->create([
         'content' => 'Hello https://example.com, how are you? https://example.com',

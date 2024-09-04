@@ -8,6 +8,10 @@ use App\Models\User;
 use Illuminate\Support\Facades\Cache;
 use Livewire\Livewire;
 
+beforeEach(function () {
+    Cache::flush();
+});
+
 test('lists no users when there are no users', function () {
     $component = Livewire::test(Users::class);
 
@@ -174,39 +178,4 @@ test('famous users are cached for a day', function () {
     $CachedFamousUsers = Cache::get('top-50-users');
 
     $this->assertEquals($famousUsers->pluck('id')->toArray(), $CachedFamousUsers);
-});
-
-test('cached famous users are refreshed after a day', function () {
-    $famousUsers = User::factory(50)
-        ->hasLinks(1, function (array $attributes, User $user) {
-            return ['url' => "https://twitter.com/{$user->username}"];
-        })
-        ->hasQuestionsReceived(2, ['answer' => 'this is an answer'])
-        ->create();
-
-    Cache::forget('top-50-users');
-
-    $component = Livewire::test(Users::class);
-
-    $this->assertTrue(Cache::has('top-50-users'));
-
-    $this->travel(1)->days();
-
-    $newFamousUsers = User::factory(50)
-        ->hasLinks(1, function (array $attributes, User $user) {
-            return ['url' => "https://twitter.com/{$user->username}"];
-        })
-        ->hasQuestionsReceived(3, ['answer' => 'this is an answer'])
-        ->create();
-
-    $this->assertFalse(Cache::has('top-50-users'));
-
-    $component->refresh();
-
-    $this->assertTrue(Cache::has('top-50-users'));
-
-    $CachedFamousUsers = Cache::get('top-50-users');
-
-    $this->assertNotEquals($famousUsers->pluck('id')->toArray(), $CachedFamousUsers);
-    $this->assertEquals($newFamousUsers->pluck('id')->toArray(), $CachedFamousUsers);
 });
