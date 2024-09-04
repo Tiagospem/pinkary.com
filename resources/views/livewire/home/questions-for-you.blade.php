@@ -2,7 +2,7 @@
     @if ($forYouQuestions->isEmpty())
         <section class="rounded-lg">
             <p class="my-8 text-center text-lg text-slate-500">
-                Não encontramos nenhuma pergunta que possa lhe interessar com base na atividade que você realizou no Toplance.
+                Não encontramos nenhuma pergunta que possa lhe interessar com base na atividade que você realizou no TopNegocios.
             </p>
         </section>
     @else

@@ -33,7 +33,7 @@ final class PendingNotifications extends Mailable implements ShouldQueue
         $notificationsCount = $this->user->notifications()->count();
 
         return new Envelope(
-            subject: 'Toplance: Você tem '.$notificationsCount.' notificação(oes)! - '.now()->format('d/m/Y'),
+            subject: 'TopNegocios: Você tem '.$notificationsCount.' notificação(oes)! - '.now()->format('d/m/Y'),
         );
     }
 

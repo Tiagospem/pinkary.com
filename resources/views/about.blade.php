@@ -1,6 +1,6 @@
 <x-about-layout>
     <div class="relative flex justify-center">
-        <div class="absolute -top-48 -z-10 size-[400px] -rotate-45 rounded-full bg-gradient-to-br from-indigo-300 via-rose-200 to-green-600 opacity-70 blur-3xl lg:size-[500px]"></div>
+        <div class="absolute -top-48 -z-10 size-[400px] -rotate-45 rounded-full bg-gradient-to-br from-indigo-300 via-orange-200 to-orange-600 opacity-70 blur-3xl lg:size-[500px]"></div>
     </div>
     <nav class="fixed top-0 z-20 flex w-full justify-end gap-2 border-b border-slate-200/10 bg-slate-950/20 p-4 shadow-2xl backdrop-blur-md">
         <a
@@ -109,7 +109,7 @@
 
             <div class="order-1 flex cursor-pointer flex-col items-center justify-center transition-transform duration-700 sm:max-w-md md:order-2 md:-translate-y-10 md:translate-x-10 md:items-start md:hover:-translate-y-5 md:hover:translate-x-5">
                 <h2 class="mb-2 w-full font-semibold">Muitos perfis interessantes.</h2>
-                <p class="text-slate-400">No Toplance, você pode encontrar amigos antigos ou conhecer novos perfis interessantes.</p>
+                <p class="text-slate-400">No TopNegocios, você pode encontrar amigos antigos ou conhecer novos perfis interessantes.</p>
                 <svg
                     class="ml-16 mt-10 hidden h-auto w-24 -rotate-45 md:block"
                     viewBox="0 0 251 81"
@@ -134,7 +134,7 @@
 
             <div class="flex cursor-pointer flex-col items-center justify-center text-left transition-transform duration-700 sm:max-w-md md:-translate-x-10 md:-translate-y-10 md:items-end md:text-right md:hover:-translate-x-5 md:hover:-translate-y-5">
                 <h2 class="mb-2 w-full font-semibold">Alguma dúvida ou agradecimento?</h2>
-                <p class="w-full text-slate-400">O Toplance tem uma forma simples e direta de comunicação, mesmo que de forma anônima.</p>
+                <p class="w-full text-slate-400">O TopNegocios tem uma forma simples e direta de comunicação, mesmo que de forma anônima.</p>
 
                 <svg
                     class="mr-16 mt-12 hidden h-auto w-20 rotate-45 md:block"

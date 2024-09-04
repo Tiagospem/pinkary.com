@@ -9,7 +9,7 @@ it('guest', function () {
 
     $response
         ->assertOk()
-        ->assertSee('Toplance')
+        ->assertSee('TopNegocios')
         ->assertSee('Um Link. Todas as Suas Redes Sociais.');
 });
 
@@ -20,7 +20,7 @@ it('auth', function () {
 
     $response
         ->assertOk()
-        ->assertSee('Toplance')
+        ->assertSee('TopNegocios')
         ->assertSee('Um Link. Todas as Suas Redes Sociais.');
 });
 

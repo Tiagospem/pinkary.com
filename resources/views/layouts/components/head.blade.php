@@ -9,7 +9,7 @@
 />
 <meta
     name="author"
-    content="Toplance"
+    content="TopNegocios"
 />
 <meta
     name="google"
@@ -23,7 +23,7 @@
 />
 <meta
     name="description"
-    content="{{ config('app.name', 'Toplance') }} - Um Link. Todas as Suas Redes Sociais."
+    content="{{ config('app.name', 'TopNegocios') }} - Um Link. Todas as Suas Redes Sociais."
     data-rh="true"
 />
 <meta
@@ -38,7 +38,7 @@
 />
 <meta
     name="keywords"
-    content="Toplance, Toplance, links, link, cv, portfolio, aggregation, platform, social, media, profile, bio, tree"
+    content="TopNegocios, TopNegocios, links, link, cv, portfolio, aggregation, platform, social, media, profile, bio, tree"
     data-rh="true"
 />
 <meta
@@ -47,7 +47,7 @@
 />
 <meta
     name="apple-mobile-web-app-title"
-    content="Toplance"
+    content="TopNegocios"
 />
 <meta
     name="apple-mobile-web-app-status-bar-style"
@@ -70,7 +70,7 @@
 />
 
 <meta
-    content="Toplance"
+    content="TopNegocios"
     property="og:site_name"
 />
 <meta
@@ -84,7 +84,7 @@
         $user = request()->route('username');
     @endphp
 
-    <title>{{ $user->name }} ({{ '@'.$user->username }}) / Toplance</title>
+    <title>{{ $user->name }} ({{ '@'.$user->username }}) / TopNegocios</title>
     <meta
         property="og:type"
         content="profile"
@@ -97,7 +97,7 @@
     />
     <meta
         property="og:title"
-        content="{{ $user->name }} ({{ '@'.$user->username }}) / Toplance"
+        content="{{ $user->name }} ({{ '@'.$user->username }}) / TopNegocios"
         data-rh="true"
     />
     <meta
@@ -119,7 +119,7 @@
         $content = $toMeta($question->content);
         $answer = $question->answer ? $toMeta($question->answer) : null;
         $isSharedUpdate = $question->isSharedUpdate();
-        $ogTitle = ($isSharedUpdate ? $question->to->name.' On Toplance' : $question->to->name.': "'.$answer.'" / Toplance');
+        $ogTitle = ($isSharedUpdate ? $question->to->name.' On TopNegocios' : $question->to->name.': "'.$answer.'" / TopNegocios');
         $ogDescription = ($isSharedUpdate ? $answer : ($question->anonymously ? 'Question' : 'Question from '.$question->from->name).': "'.$content.'"');
     @endphp
 
@@ -145,22 +145,22 @@
     />
 
     @if ($answer)
-        <title>{{ $question->to->name }}: "{!! $answer !!}" / Toplance</title>
+        <title>{{ $question->to->name }}: "{!! $answer !!}" / TopNegocios</title>
         <meta
             property="og:title"
             content='{{ $ogTitle }}'
             data-rh="true"
         />
     @else
-        <title>{{ config('app.name', 'Toplance') }} - Um Link. Todas as Suas Redes Sociais.</title>
+        <title>{{ config('app.name', 'TopNegocios') }} - Um Link. Todas as Suas Redes Sociais.</title>
         <meta
             property="og:title"
-            content="{{ config('app.name', 'Toplance') }} - Um Link. Todas as Suas Redes Sociais."
+            content="{{ config('app.name', 'TopNegocios') }} - Um Link. Todas as Suas Redes Sociais."
             data-rh="true"
         />
     @endif
 @else
-    <title>{{ config('app.name', 'Toplance') }} - Um Link. Todas as Suas Redes Sociais.</title>
+    <title>{{ config('app.name', 'TopNegocios') }} - Um Link. Todas as Suas Redes Sociais.</title>
     <meta
         property="og:type"
         content="website"
@@ -168,12 +168,12 @@
     />
     <meta
         property="og:title"
-        content="{{ config('app.name', 'Toplance') }} - Um Link. Todas as Suas Redes Sociais."
+        content="{{ config('app.name', 'TopNegocios') }} - Um Link. Todas as Suas Redes Sociais."
         data-rh="true"
     />
     <meta
         property="og:description"
-        content="{{ config('app.name', 'Toplance') }} - Um Link. Todas as Suas Redes Sociais."
+        content="{{ config('app.name', 'TopNegocios') }} - Um Link. Todas as Suas Redes Sociais."
         data-rh="true"
     />
     <meta

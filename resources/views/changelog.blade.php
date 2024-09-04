@@ -3,7 +3,7 @@
 
     <div class="flex flex-col items-center justify-center">
         <div class="min-h-screen w-full max-w-md px-2 sm:px-0">
-            <p class="text-slate-400">Um registro de mudanças das últimas versões da Toplance, atualizações, correções importantes de bugs.</p>
+            <p class="text-slate-400">Um registro de mudanças das últimas versões da TopNegocios, atualizações, correções importantes de bugs.</p>
 
             <div class="relative mb-20 mt-12 py-1">
                 <div class="absolute bottom-0 left-0 top-0 hidden w-6 justify-center sm:flex">

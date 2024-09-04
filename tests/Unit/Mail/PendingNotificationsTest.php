@@ -18,5 +18,5 @@ test('envelope', function () {
     $envelope = $mail->envelope();
 
     expect($envelope->subject)
-        ->toBe('Toplance: Você tem 1 notificação(oes)! - '.now()->format('d/m/Y'));
+        ->toBe('TopNegocios: Você tem 1 notificação(oes)! - '.now()->format('d/m/Y'));
 });

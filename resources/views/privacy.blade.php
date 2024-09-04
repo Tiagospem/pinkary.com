@@ -15,7 +15,7 @@
                 <p><strong>Última Atualização: 19 de fevereiro de 2024</strong></p>
 
                 <p>
-                    Bem-vindo ao Toplance. Estamos comprometidos em proteger suas informações pessoais e seu direito à privacidade.
+                    Bem-vindo ao TopNegocios. Estamos comprometidos em proteger suas informações pessoais e seu direito à privacidade.
                     Se você tiver alguma dúvida ou preocupação sobre este aviso de privacidade, ou nossas práticas em relação às suas informações pessoais,
                     entre em contato conosco pelo e-mail contato@leilotech.com.br.
                 </p>
@@ -98,7 +98,7 @@
                 <h2>7. Entre em Contato Conosco</h2>
                 <p>
                     Se você tiver perguntas ou comentários sobre esta política, pode nos enviar um e-mail para
-                    <a href="mailto:team@Toplance.com">contato@leilotech.com.br</a>.
+                    <a href="mailto:team@TopNegocios.com">contato@leilotech.com.br</a>.
                 </p>
 
             </div>
