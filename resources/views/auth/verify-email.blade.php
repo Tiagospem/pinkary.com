@@ -1,10 +1,10 @@
 <x-guest-layout>
     <div class="mb-4 text-sm text-slate-400">
-        {{ __('Thanks for signing up! Before getting started, could you verify your email address by clicking on the link we just emailed to you? If you didn\'t receive the email, we will gladly send you another.') }}
+        {{ __('Obrigado por se inscrever! Antes de começar, você poderia verificar seu endereço de e-mail clicando no link que acabamos de enviar para você? Se você não recebeu o e-mail, ficaremos felizes em enviar outro.') }}
     </div>
 
     <div class="mb-4 text-sm text-slate-400">
-        {{ __('Accounts are required to be verified before they can be used. Non-verified accounts will be automatically deleted after 24 hours.') }}
+        {{ __('As contas precisam ser verificadas antes de serem usadas. Contas não verificadas serão automaticamente deletadas após 24 horas.') }}
     </div>
 
     <div class="mt-4 flex items-center justify-between">
@@ -16,7 +16,7 @@
 
             <div>
                 <x-primary-button>
-                    {{ __('Resend Verification Email') }}
+                    {{ __('Reenviar E-mail de Verificação') }}
                 </x-primary-button>
             </div>
         </form>
@@ -31,7 +31,7 @@
                 type="submit"
                 class="rounded-md text-sm text-slate-400 underline hover:text-slate-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
             >
-                {{ __('Log Out') }}
+                {{ __('Sair') }}
             </button>
         </form>
     </div>
