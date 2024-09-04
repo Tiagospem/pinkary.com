@@ -33,6 +33,7 @@ final class UserResource extends Resource
                     ->searchable(),
                 Tables\Columns\TextColumn::make('username')
                     ->searchable(),
+                Tables\Columns\ToggleColumn::make('is_verified'),
             ])
             ->actions([
                 Tables\Actions\Action::make('visit_question')
