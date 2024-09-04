@@ -1,4 +1,4 @@
-<div class="flex gap-8 flex-col justify-center items-center">
+<div class="flex gap-4 flex-col justify-center items-center">
     <x-toplance-logo class="z-10 w-36" />
     <div class="mb-8 w-full flex justify-between space-x-2">
         <a
