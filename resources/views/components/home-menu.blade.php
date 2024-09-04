@@ -1,5 +1,5 @@
 <div class="flex gap-4 flex-col justify-center items-center">
-    <x-toplance-logo class="z-10 w-36" />
+    <x-toplance-logo class="z-10 w-36 mt-2" />
     <div class="mb-8 w-full flex justify-between space-x-2">
         <a
             href="{{ route('home.feed') }}"
