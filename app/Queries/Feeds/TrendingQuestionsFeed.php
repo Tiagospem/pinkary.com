@@ -45,7 +45,7 @@ final readonly class TrendingQuestionsFeed
             ->withCount('likes', 'children')
             ->orderByRaw(<<<SQL
                 (((likes_count * {$likesBias} + 1.0) * (children_count * {$commentsBias} + 1.0))
-                / (strftime('%s') - strftime('%s', answer_created_at) + {$timeBias} + 1.0)) desc
+                / (UNIX_TIMESTAMP(NOW()) - UNIX_TIMESTAMP(answer_created_at) + {$timeBias} + 1.0)) desc
                 SQL,
             )
             ->where('is_reported', false)
